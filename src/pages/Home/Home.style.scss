@@ -1,0 +1,110 @@
+@import "../../utils/utils.style.scss";
+
+.home__container {
+  background: none !important;
+  margin-top: 100px;
+
+  .app__grid {
+    padding-top: 100px;
+
+    .home__main__section {
+      p {
+        color: $gray-lighter-color;
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+
+      &.left {
+        position: relative;
+        width: 100%;
+      }
+
+      &.right {
+        position: relative;
+        width: 100%;
+
+        img {
+          border-radius: $external-border-radius;
+          height: fit-content;
+          max-height: 650px;
+          min-width: 100%;
+          object-fit: cover;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .home__container {
+    .app__grid {
+      grid-template-columns: 3fr 2fr !important;
+    }
+  }
+}
+
+@media (max-width: 1449px) {
+  .home__container {
+    .app__grid {
+      grid-template-columns: 2fr 1fr !important;
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .home__container {
+    .app__grid {
+      padding-top: 120px;
+    }
+  }
+}
+
+@media (max-width: 1375px) {
+  .home__container {
+    background-image: var(--bg) !important;
+    width: 100% !important;
+
+    &::before {
+      backdrop-filter: brightness(0.6);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .app__grid {
+      grid-template-columns: 1fr !important;
+
+      .home__main__section {
+        &.left {
+          position: relative;
+          width: 100%;
+
+          h1,
+          .subtitle {
+            color: #fff;
+            margin: auto;
+            margin-bottom: 50px;
+            text-align: center;
+            text-shadow: 0 0 5px rgba($color: #000000, $alpha: 1);
+            width: 90%;
+          }
+
+          .home__panel {
+            background: #fff;
+            margin: auto;
+            position: relative;
+            width: fit-content;
+          }
+        }
+
+        &.right {
+          display: none;
+        }
+      }
+    }
+  }
+}
