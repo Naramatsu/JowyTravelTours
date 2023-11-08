@@ -1,0 +1,74 @@
+@import "../../utils/utils.style.scss";
+
+.home__panel {
+  border-radius: $external-border-radius;
+  bottom: 7px;
+  box-shadow: $box-shadows00200;
+  position: absolute;
+  width: min-content;
+
+  .home__panel__container {
+    margin-top: 20px;
+    padding: 1em;
+
+    .app__grid {
+      gap: 30px;
+      padding-top: 0;
+    }
+  }
+
+  .table__header {
+    width: 100%;
+  }
+
+  .home__panel__button {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+
+    button {
+      @include buttonOrangeGradient;
+      @include boxShadows;
+      @include fontShadows;
+      @include displayFlex;
+      border: none;
+      border-radius: $external-border-radius;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 1rem;
+      width: 100%;
+
+      svg {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.input__control {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  label {
+    font-weight: bold;
+  }
+
+  .input__control__field {
+    position: relative;
+
+    input {
+      border: solid 1px $gray-inputs;
+      border-radius: $internal-border-radius;
+      padding: 1em;
+      padding-left: 35px;
+      width: -webkit-fill-available;
+    }
+
+    svg {
+      @include svgFloat;
+    }
+  }
+}
