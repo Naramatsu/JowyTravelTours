@@ -3,3 +3,6 @@ export const columnsGenerator = (columns) => {
   for (let i = 1; i < columns; i++) fractionsGenerates += " 1fr";
   return fractionsGenerates;
 };
+
+export const isActiveTab = (currentTab, activeTab) =>
+  currentTab === activeTab ? "active" : "";

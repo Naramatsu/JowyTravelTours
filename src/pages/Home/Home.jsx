@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "../../components/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
 import "./Home.style.scss";
+import { PreferencesAppContext } from "../../context/Preferences";
+import { mainSlogan } from "./data";
 
 const Home = () => {
+  const { languaje } = useContext(PreferencesAppContext);
   return (
     <>
       <Container
@@ -17,14 +20,7 @@ const Home = () => {
       >
         <Grid columns={2}>
           <section className="home__main__section left">
-            <h1>
-              Life is short, <br />
-              the world is wide
-            </h1>
-            <p className="subtitle">
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto.
-            </p>
+            {mainSlogan[languaje]}
             <br />
             <HomePanel />
           </section>

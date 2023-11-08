@@ -1,4 +1,4 @@
-export const SPANISH = "SPANISH";
-export const ENGLISH = "ENGLISH";
-export const DARK = "DARK";
-export const LIGHT = "LIGHT";
+export const SPANISH = "spanish";
+export const ENGLISH = "english";
+export const DARK = "dark";
+export const LIGHT = "light";
