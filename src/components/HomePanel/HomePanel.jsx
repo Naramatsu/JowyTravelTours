@@ -5,12 +5,14 @@ import { btnSearch, hospedajeForm } from "./data";
 import { PreferencesAppContext } from "../../context/Preferences";
 import "./HomePanel.style.scss";
 
+const classNamePrefixComponent = "home__panel";
+
 const HomePanel = () => {
   const { languaje } = useContext(PreferencesAppContext);
   return (
-    <section className="home__panel">
+    <section className={`${classNamePrefixComponent}`}>
       <TableHeader />
-      <section className="home__panel__container">
+      <section className={`${classNamePrefixComponent}__container`}>
         <Grid columns={2}>
           {hospedajeForm[languaje].map(({ label, name, icon }, index) => (
             <section className="input__control" key={index}>
@@ -22,7 +24,7 @@ const HomePanel = () => {
             </section>
           ))}
         </Grid>
-        <section className="home__panel__button">
+        <section className={`${classNamePrefixComponent}__button`}>
           <button>
             {btnSearch.icon}
             {btnSearch[languaje].label}

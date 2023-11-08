@@ -1,3 +1,4 @@
+import { BsBrightnessHigh, BsFillMoonFill } from "react-icons/bs";
 import { DARK, ENGLISH, LIGHT, SPANISH } from "../../utils/constants";
 
 export const routeTabs = {
@@ -53,6 +54,12 @@ export const appLanguaje = {
 };
 
 export const appTheme = {
-  [DARK]: "Dark",
-  [LIGHT]: "Light",
+  [DARK]: {
+    className: "Dark",
+    icon: <BsFillMoonFill />,
+  },
+  [LIGHT]: {
+    className: "Light",
+    icon: <BsBrightnessHigh />,
+  },
 };
