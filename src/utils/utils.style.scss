@@ -1,0 +1,77 @@
+@mixin linkNoVisited($color) {
+  color: $color;
+  text-decoration: none;
+
+  &:visited {
+    color: $color;
+  }
+}
+
+@mixin displayFlex {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@mixin fontShadows {
+  text-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+}
+
+@mixin boxShadows {
+  box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.25);
+}
+
+@mixin buttonOrangeGradient {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 139, 77, 1) 35%,
+    rgba(255, 80, 33, 1) 100%
+  );
+}
+
+@mixin buttonBlueGradient {
+  background: linear-gradient(
+    180deg,
+    rgba(63, 178, 254, 1) 35%,
+    rgba(33, 126, 254, 1) 100%
+  );
+}
+
+@mixin activePanel {
+  position: relative;
+
+  &::before {
+    background-color: $oragen-color;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@mixin svgFloat {
+  color: $gray-header-text;
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+$oragen-color: #ff5c2a;
+$gray-lighter-color: #757679;
+$gray-header-bg: #f1f5f5;
+$gray-header-text: #7c8587;
+$gray-inputs: #d7dddf;
+
+$external-border-radius: 20px;
+$border-radius-padding: 10px;
+$internal-border-radius: 10px;
+
+$box-shadows00200: 0 0 20px 0px
+  rgba(
+    $color: #000000,
+    $alpha: 0.25,
+  );
