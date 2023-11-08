@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   .header__container {
     @include displayFlex;
@@ -93,10 +93,10 @@
 
       .header__links {
         background: #fff;
-        bottom: -54px;
+        bottom: -83px;
         left: 50%;
         position: absolute;
-        transform: translateX(-50%);
+        transform: translateX(-51%);
       }
 
       .header__settings {

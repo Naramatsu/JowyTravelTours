@@ -1,8 +1,14 @@
 @import "../../utils/utils.style.scss";
 
+table {
+  border-spacing: 0;
+  display: block;
+}
+
 .table__header {
   background-color: $gray-header-bg;
   border-radius: 20px 20px 0 0;
+  display: block;
   position: relative;
 
   tr {

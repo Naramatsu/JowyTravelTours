@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
-import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import { Switch, Route } from "react-router-dom";
 
 const App = () => (
   <div className="App">

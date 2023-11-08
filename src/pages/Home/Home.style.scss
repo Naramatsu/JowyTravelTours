@@ -17,6 +17,10 @@
       &.left {
         position: relative;
         width: 100%;
+
+        h1 {
+          font-size: 3.5em;
+        }
       }
 
       &.right {
@@ -55,7 +59,7 @@
 @media (max-width: 1169px) {
   .home__container {
     .app__grid {
-      padding-top: 120px;
+      padding-top: 150px;
     }
   }
 }
