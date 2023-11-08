@@ -83,6 +83,27 @@
       }
     }
   }
+
+  &.dark {
+    .header__container {
+      h2 {
+        a {
+          @include linkNoVisited(#fff);
+        }
+      }
+
+      .header__links,
+      .header__settings {
+        ul {
+          li {
+            a {
+              @include linkNoVisited($gray-inputs);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1169px) {
@@ -102,6 +123,16 @@
       .header__settings {
         top: 0;
         transform: translateY(-14px);
+      }
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .header.dark {
+    .header__container {
+      .header__links {
+        background: $dark-color;
       }
     }
   }

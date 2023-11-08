@@ -2,15 +2,13 @@ import React, { useContext } from "react";
 import Container from "../Container";
 import { appLanguaje, appTheme, routeTabs } from "./data";
 import { BiGlobe } from "react-icons/bi";
-import { BsBrightnessHigh } from "react-icons/bs";
 import { DARK, ENGLISH, LIGHT, SPANISH } from "../../utils/constants";
+import { isDarkTheme } from "../../utils";
 import { Link } from "react-router-dom";
 import { PreferencesAppContext } from "../../context/Preferences";
 import "./Header.style.scss";
 
 const classNamePrefixComponent = "header";
-
-const isDarkTheme = (theme) => (theme === DARK ? DARK : "");
 
 const Header = () => {
   const { languaje, theme, setLanguaje, setTheme } = useContext(
@@ -23,7 +21,7 @@ const Header = () => {
     theme === LIGHT ? setTheme(DARK) : setTheme(LIGHT);
 
   return (
-    <header className={classNamePrefixComponent}>
+    <header className={`${classNamePrefixComponent} ${isDarkTheme(theme)}`}>
       <Container
         className={`${classNamePrefixComponent}__container`}
         width="90%"
@@ -54,8 +52,8 @@ const Header = () => {
               )}`}
               onClick={handlerTheme}
             >
-              <BsBrightnessHigh />
-              {appTheme[theme]}
+              {appTheme[theme].icon}
+              {appTheme[theme].className}
             </li>
           </ul>
         </aside>

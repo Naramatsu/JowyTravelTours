@@ -12,12 +12,16 @@ table {
   position: relative;
 
   tr {
+    display: flex;
+    justify-content: space-between;
+
     th {
       background-color: $gray-header-bg;
       color: $gray-header-text;
       cursor: pointer;
       font-weight: 400;
       padding: 1.25rem 1rem;
+      font-size: 0.75rem;
 
       &:nth-child(1) {
         border-radius: 20px 0 0 0;

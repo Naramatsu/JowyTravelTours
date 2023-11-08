@@ -6,6 +6,7 @@
   box-shadow: $box-shadows00200;
   position: absolute;
   width: min-content;
+  background-color: #fff;
 
   .home__panel__container {
     margin-top: 10px;
@@ -13,6 +14,7 @@
 
     .app__grid {
       gap: 30px;
+      grid-template-columns: 1fr 1fr !important;
       padding-top: 0;
     }
   }
@@ -54,6 +56,7 @@
 
   label {
     font-weight: bold;
+    color: #000;
   }
 
   .input__control__field {

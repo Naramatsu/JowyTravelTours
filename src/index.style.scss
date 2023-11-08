@@ -1,3 +1,5 @@
+@import "./utils/utils.style.scss";
+
 * {
   font-family: "Exo", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -19,4 +21,13 @@ h1 {
 .app__container {
   margin: auto;
   position: relative;
+}
+
+.dark {
+  background-color: $dark-color;
+  color: #fff;
+
+  &.front {
+    background-color: $dark-front-color;
+  }
 }
