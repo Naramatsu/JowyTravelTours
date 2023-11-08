@@ -1,0 +1,22 @@
+* {
+  font-family: "Exo", sans-serif;
+  font-family: "Poppins", sans-serif;
+  // font-family: "Exo", "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 600;
+  margin: auto;
+}
+
+.app__container {
+  margin: auto;
+  position: relative;
+}
