@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import Container from "../../components/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
-import "./Home.style.scss";
+import Slider from "../../components/Slider";
 import { PreferencesAppContext } from "../../context/Preferences";
 import { mainSlogan } from "./data";
+import "./Home.style.scss";
 
 const Home = () => {
   const { languaje } = useContext(PreferencesAppContext);
@@ -32,6 +33,7 @@ const Home = () => {
           </section>
         </Grid>
       </Container>
+      <Slider />
     </>
   );
 };

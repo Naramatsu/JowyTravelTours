@@ -31,3 +31,8 @@ h1 {
     background-color: $dark-front-color;
   }
 }
+
+.disabled {
+  background-color: $disabled-color;
+  color: $gray-header-text;
+}

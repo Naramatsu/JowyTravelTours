@@ -1,0 +1,117 @@
+@import "../../utils/utils.style.scss";
+
+.app__slider {
+  padding-top: 60px;
+  position: relative;
+  padding-bottom: 50px;
+
+  .app__slider__title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: 500;
+    }
+
+    .app__slider__title__controls {
+      svg {
+        background-color: $disabled-color;
+        border-radius: 50%;
+        color: $gray-header-text;
+        cursor: not-allowed;
+        font-size: 1.75rem;
+        margin: 0 5px;
+        padding: 5px;
+        transition: ease-in-out all 0.5s;
+
+        &.active {
+          @include buttonOrangeGradient;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .app__slider__items {
+    overflow: hidden;
+
+    .app__slider__section {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      transition: ease-in-out all 0.5s;
+      position: relative;
+
+      .app__slider__section__item {
+        border-radius: $external-border-radius;
+        height: 300px;
+        max-width: 250px;
+        min-width: 250px;
+        position: relative;
+        width: 250px;
+
+        .brightness {
+          backdrop-filter: brightness(0.8);
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          border-radius: $external-border-radius;
+        }
+
+        img {
+          border-radius: $external-border-radius;
+          height: 100%;
+          left: 0;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+
+        .app__slider__section__item__caption {
+          background: #fff;
+          border-radius: $internal-border-radius;
+          bottom: 15px;
+          color: $gray-header-text;
+          font-size: 0.75rem;
+          left: 50%;
+          margin: auto;
+          padding: 10px;
+          position: absolute;
+          transform: translateX(-50%);
+          width: 70%;
+
+          b {
+            color: #000;
+            font-size: 0.95rem;
+            font-weight: 600;
+          }
+
+          p {
+            margin: 5px 0;
+
+            svg {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .app__slider {
+    .app__slider__items {
+      .app__slider__section {
+        justify-content: center;
+      }
+    }
+  }
+}
