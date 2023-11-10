@@ -12,7 +12,7 @@ const data = Array(6).fill({
   },
 });
 
-const Slider = ({ width = "70%" }) => {
+const Slider = ({ width = "100%", title }) => {
   const refSlider = useRef(null);
   const percentaje = parseFloat(width) / 100;
   const [sliderLeft, setSliderLeft] = useState(0);
@@ -56,7 +56,7 @@ const Slider = ({ width = "70%" }) => {
   return (
     <section className="app__slider">
       <Container className="app__slider__title" width="70%">
-        <h2>Popular Places</h2>
+        <h2>{title}</h2>
         <aside className="app__slider__title__controls">
           {showControls() && (
             <>
@@ -72,7 +72,6 @@ const Slider = ({ width = "70%" }) => {
           )}
         </aside>
       </Container>
-
       <Container className="app__slider__items" width={itemsWidth}>
         <section
           ref={refSlider}

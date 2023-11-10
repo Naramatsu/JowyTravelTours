@@ -26,3 +26,8 @@ export const mainSlogan = {
     </>
   ),
 };
+
+export const popularPlaces = {
+  [SPANISH]: "Lugares Populares",
+  [ENGLISH]: "Popular Places",
+};
