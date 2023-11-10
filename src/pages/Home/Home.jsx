@@ -3,8 +3,9 @@ import Container from "../../components/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
 import Slider from "../../components/Slider";
+import VideoPromo from "../../components/VideoPromo/VideoPromo";
 import { PreferencesAppContext } from "../../context/Preferences";
-import { mainSlogan } from "./data";
+import { mainSlogan, popularPlaces } from "./data";
 import "./Home.style.scss";
 
 const Home = () => {
@@ -33,7 +34,10 @@ const Home = () => {
           </section>
         </Grid>
       </Container>
-      <Slider />
+      <Slider width="70%" title={popularPlaces[languaje]} />
+      <Container width="70%">
+        <VideoPromo />
+      </Container>
     </>
   );
 };
