@@ -36,3 +36,9 @@ h1 {
   background-color: $disabled-color;
   color: $gray-header-text;
 }
+
+@media (max-width: 1525px) {
+  .app__container {
+    width: 80% !important;
+  }
+}
