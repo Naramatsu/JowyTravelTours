@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import CardPresentation from "../CardPresentation/";
 import Container from "../Container";
-
-import { BsArrowLeftShort, BsArrowRightShort, BsGeoAlt } from "react-icons/bs";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import "./Slider.style.scss";
 
 const data = Array(6).fill({
@@ -79,17 +79,12 @@ const Slider = ({ width = "100%", title }) => {
           style={{ left: sliderLeftPixel }}
         >
           {data.map((place, index) => (
-            <section key={index} className="app__slider__section__item">
-              <img src={place.img} alt={place.info.name} />
-              <section className="brightness" />
-              <section className="app__slider__section__item__caption">
-                <b>{place.info.name}</b>
-                <p>
-                  <BsGeoAlt />
-                  {place.info.location}
-                </p>
-              </section>
-            </section>
+            <CardPresentation
+              key={index}
+              img={place.img}
+              name={place.info.name}
+              location={place.info.location}
+            />
           ))}
         </section>
       </Container>

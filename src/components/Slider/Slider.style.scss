@@ -45,63 +45,6 @@
       gap: 20px;
       transition: ease-in-out all 0.5s;
       position: relative;
-
-      .app__slider__section__item {
-        border-radius: $external-border-radius;
-        height: 300px;
-        max-width: 250px;
-        min-width: 250px;
-        position: relative;
-        width: 250px;
-
-        .brightness {
-          backdrop-filter: brightness(0.8);
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-          border-radius: $external-border-radius;
-        }
-
-        img {
-          border-radius: $external-border-radius;
-          height: 100%;
-          left: 0;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          width: 100%;
-        }
-
-        .app__slider__section__item__caption {
-          background: #fff;
-          border-radius: $internal-border-radius;
-          bottom: 15px;
-          color: $gray-header-text;
-          font-size: 0.75rem;
-          left: 50%;
-          margin: auto;
-          padding: 10px;
-          position: absolute;
-          transform: translateX(-50%);
-          width: 70%;
-
-          b {
-            color: #000;
-            font-size: 0.95rem;
-            font-weight: 600;
-          }
-
-          p {
-            margin: 5px 0;
-
-            svg {
-              margin-right: 5px;
-            }
-          }
-        }
-      }
     }
   }
 }
