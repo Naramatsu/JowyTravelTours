@@ -1,0 +1,55 @@
+@import "../../utils/utils.style.scss";
+
+.chip__container {
+  @include displayFlex;
+  position: relative;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: $chip-gb-container;
+  border-radius: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &.dark {
+    background-color: $chip-gb-container;
+  }
+
+  &.light {
+    background-color: $gray-header-bg;
+
+    .app__chip {
+      background: #fff;
+
+      svg {
+        background-color: $gray-header-bg;
+      }
+    }
+  }
+
+  .app__chip {
+    @include displayFlex;
+    width: min-content;
+    padding: 5px;
+    border-radius: 25px;
+    padding-right: 20px;
+    background-color: $chip-gb;
+    cursor: pointer;
+
+    svg {
+      background-color: $chip-gb-icon;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    &.active {
+      @include buttonOrangeGradient;
+      box-shadow: $box-shadows00200;
+      color: #fff;
+
+      svg {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
