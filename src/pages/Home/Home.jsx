@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Container from "../../components/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
+import HomeProducts from "../../layout/HomeProducts";
 import Slider from "../../components/Slider";
 import VideoPromo from "../../components/VideoPromo/VideoPromo";
 import { PreferencesAppContext } from "../../context/Preferences";
@@ -37,6 +38,7 @@ const Home = () => {
       <Slider width="70%" title={popularPlaces[languaje]} />
       <Container width="70%">
         <VideoPromo />
+        <HomeProducts />
       </Container>
     </>
   );
