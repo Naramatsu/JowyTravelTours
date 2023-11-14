@@ -1,18 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-import CardPresentation from "../CardPresentation/";
 import Container from "../Container";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import "./Slider.style.scss";
 
-const data = Array(6).fill({
-  img: "https://www.civitatis.com/f/colombia/cartagena-de-indias/excursion-playa-blanca-589x392.jpg",
-  info: {
-    name: "Playa blanca",
-    location: "Cartagena - Baru",
-  },
-});
-
-const Slider = ({ width = "100%", title }) => {
+const Slider = ({
+  width = "100%",
+  title,
+  isFullWidth = false,
+  size,
+  children,
+}) => {
   const refSlider = useRef(null);
   const percentaje = parseFloat(width) / 100;
   const [sliderLeft, setSliderLeft] = useState(0);
@@ -20,7 +17,7 @@ const Slider = ({ width = "100%", title }) => {
   const [actualWidth, setActualWidth] = useState(
     window.innerWidth * percentaje
   );
-  const itemsWidth = width ? width : "";
+  const isFullWidthClassName = isFullWidth ? "fullwidth" : "";
 
   useEffect(() => {
     const handlerWindowSize = () => {
@@ -44,13 +41,13 @@ const Slider = ({ width = "100%", title }) => {
     if (rightActive()) setSliderLeft(sliderLeft - 1);
   };
 
-  const showControls = () => (actualWidth >= data.length * 270 ? false : true);
+  const showControls = () => (actualWidth >= size * 270 ? false : true);
 
   const leftActive = () => (sliderLeft < 0 ? "active" : "");
 
   const rightActive = () => {
     const panelWidth = refSlider?.current?.offsetWidth || actualWidth;
-    return (data.length + sliderLeft) * 270 > panelWidth ? "active" : "";
+    return (size + sliderLeft) * 270 > panelWidth ? "active" : "";
   };
 
   return (
@@ -72,20 +69,16 @@ const Slider = ({ width = "100%", title }) => {
           )}
         </aside>
       </Container>
-      <Container className="app__slider__items" width={itemsWidth}>
+      <Container
+        className={`app__slider__items ${isFullWidthClassName}`}
+        width={width}
+      >
         <section
           ref={refSlider}
           className="app__slider__section"
           style={{ left: sliderLeftPixel }}
         >
-          {data.map((place, index) => (
-            <CardPresentation
-              key={index}
-              img={place.img}
-              name={place.info.name}
-              location={place.info.location}
-            />
-          ))}
+          {children}
         </section>
       </Container>
     </section>
