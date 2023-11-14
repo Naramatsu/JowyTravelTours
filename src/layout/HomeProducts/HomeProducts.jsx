@@ -9,7 +9,6 @@ import "./HomeProducts.style.scss";
 const HomeProducts = () => {
   const { languaje } = useContext(PreferencesAppContext);
   const [actualData, setActualData] = useState([]);
-  const [pagination, setPagination] = useState(1);
   const [chipActive, setChipActive] = useState("");
 
   const handlerActiveChips = (item) => {
@@ -21,12 +20,8 @@ const HomeProducts = () => {
   }, [languaje]);
 
   useEffect(() => {
-    setActualData(
-      items[languaje]
-        .filter((card) => card.tag === chipActive)
-        .slice(0, pagination * 4)
-    );
-  }, [pagination, chipActive, languaje]);
+    setActualData(items[languaje].filter((card) => card.tag === chipActive));
+  }, [chipActive, languaje]);
 
   return (
     <section className="app__home__products">
@@ -55,7 +50,7 @@ const HomeProducts = () => {
           </section>
         )}
       </section>
-      <button onClick={() => setPagination(pagination + 1)}>View All</button>
+      <button>View All</button>
     </section>
   );
 };

@@ -1,12 +1,20 @@
 import React, { useContext } from "react";
+import CardClientsTestimonials from "../../components/CardClientsTestimonials";
+import CardPresentation from "../../components/CardPresentation";
 import Container from "../../components/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
 import HomeProducts from "../../layout/HomeProducts";
 import Slider from "../../components/Slider";
-import VideoPromo from "../../components/VideoPromo/VideoPromo";
+import VideoPromo from "../../components/VideoPromo";
 import { PreferencesAppContext } from "../../context/Preferences";
-import { mainSlogan, popularPlaces } from "./data";
+import {
+  clientsTestimonials,
+  clientsTestimonialsItems,
+  mainSlogan,
+  popularPlaces,
+  popularPlacesItems,
+} from "./data";
 import "./Home.style.scss";
 
 const Home = () => {
@@ -35,11 +43,33 @@ const Home = () => {
           </section>
         </Grid>
       </Container>
-      <Slider width="70%" title={popularPlaces[languaje]} />
+      <Slider
+        width="70%"
+        title={popularPlaces[languaje]}
+        size={popularPlacesItems.length}
+      >
+        {popularPlacesItems.map((place, index) => (
+          <CardPresentation
+            key={index}
+            img={place.img}
+            name={place.info.name}
+            location={place.info.location}
+          />
+        ))}
+      </Slider>
       <Container width="70%">
         <VideoPromo />
         <HomeProducts />
       </Container>
+      <Slider
+        title={clientsTestimonials[languaje]}
+        isFullWidth
+        size={clientsTestimonialsItems.length}
+      >
+        {clientsTestimonialsItems.map((testimonial, index) => (
+          <CardClientsTestimonials key={index} items={testimonial} />
+        ))}
+      </Slider>
     </>
   );
 };
