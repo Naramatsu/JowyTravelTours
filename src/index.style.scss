@@ -46,3 +46,9 @@ h1 {
     }
   }
 }
+
+@media (max-width: 650px) {
+  .app__container {
+    width: 95% !important;
+  }
+}
