@@ -58,3 +58,14 @@
     }
   }
 }
+
+@media (max-width: 650px) {
+  .app__slider {
+    .app__slider__title {
+      h2 {
+        padding-left: 20px;
+        font-size: 2rem;
+      }
+    }
+  }
+}

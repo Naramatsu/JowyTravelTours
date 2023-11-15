@@ -68,6 +68,7 @@
   .home__container {
     background-image: var(--bg) !important;
     width: 100% !important;
+    background-size: cover !important;
 
     &::before {
       backdrop-filter: brightness(0.6);

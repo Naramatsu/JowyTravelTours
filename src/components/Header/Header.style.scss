@@ -106,13 +106,14 @@
   }
 }
 
-@media (max-width: 1169px) {
+@media (max-width: 1285px) {
   .header {
     .header__container {
       display: block;
       position: relative;
 
       .header__links {
+        width: max-content;
         background: #fff;
         bottom: -83px;
         left: 50%;
@@ -133,6 +134,26 @@
     .header__container {
       .header__links {
         background: $dark-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .header {
+    .header__container {
+      .header__links {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    .header__container {
+      .header__settings {
+        right: 20px;
       }
     }
   }
