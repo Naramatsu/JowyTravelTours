@@ -1,0 +1,47 @@
+@import "../../utils/utils.style.scss";
+
+.app__contactus__panel {
+  position: relative;
+  height: 500px;
+  border-radius: $external-border-radius;
+  background-color: $card-testimonial-light-bg;
+  margin: 50px auto;
+
+  &.dark {
+    background-color: $card-testimonial-dark-bg;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .app__contactus__panel__container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    button {
+      @include buttonOrangeGradient;
+      @include boxShadows;
+      @include fontShadows;
+      @include displayFlex;
+      border: none;
+      border-radius: $external-border-radius;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+  }
+}
