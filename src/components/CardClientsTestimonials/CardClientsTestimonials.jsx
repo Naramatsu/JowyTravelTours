@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   FaQuoteLeft,
   FaQuoteRight,
@@ -6,7 +6,6 @@ import {
   FaStar,
   FaStarHalfAlt,
 } from "react-icons/fa";
-import { PreferencesAppContext } from "../../context/Preferences";
 import "./CardClientsTestimonials.style.scss";
 
 const builRateStars = (rate) => {
@@ -22,26 +21,23 @@ const builRateStars = (rate) => {
   return result;
 };
 
-const CardClientsTestimonials = ({ items }) => {
-  const { theme } = useContext(PreferencesAppContext);
-  return (
-    <section className={`card__clients__testimonials ${theme}`}>
-      <FaQuoteLeft className="icon__bg" />
-      <FaQuoteRight className="icon__bg down" />
-      <section className="card__clients__testimonials__info">
-        <img src={items.img} alt="avatar" />
-        <h3>{items.name}</h3>
-      </section>
-      <section className="card__clients__testimonials__caption">
-        <p>{items.testimonial}</p>
-      </section>
-      <section className="card__clients__testimonials__rate">
-        {builRateStars(items.rate).map((star, index) => (
-          <span key={index}>{star}</span>
-        ))}
-      </section>
+const CardClientsTestimonials = ({ items, languaje, theme }) => (
+  <section className={`card__clients__testimonials ${theme}`}>
+    <FaQuoteLeft className="icon__bg" />
+    <FaQuoteRight className="icon__bg down" />
+    <section className="card__clients__testimonials__info">
+      <img src={items.img} alt="avatar" />
+      <h3>{items.name}</h3>
     </section>
-  );
-};
+    <section className="card__clients__testimonials__caption">
+      <p>{items.testimonial[languaje]}</p>
+    </section>
+    <section className="card__clients__testimonials__rate">
+      {builRateStars(items.rate).map((star, index) => (
+        <span key={index}>{star}</span>
+      ))}
+    </section>
+  </section>
+);
 
 export default CardClientsTestimonials;

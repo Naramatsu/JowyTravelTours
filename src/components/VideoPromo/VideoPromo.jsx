@@ -1,15 +1,13 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import Grid from "../../layout/Grid";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { cartagenaInfo } from "./data";
-import { PreferencesAppContext } from "../../context/Preferences";
 import "./VideoPromo.style.scss";
 
 const videoUrl =
   "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4";
 
-const VideoPromo = () => {
-  const { languaje } = useContext(PreferencesAppContext);
+const VideoPromo = ({ languaje }) => {
   const [onPlayPause, setOnPlayPause] = useState(false);
   const videoRef = useRef(null);
 

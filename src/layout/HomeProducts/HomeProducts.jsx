@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import ChipsContainer from "../../components/ChipsContainer";
 import CardPresentation from "../../components/CardPresentation";
 import { CiWarning } from "react-icons/ci";
 import { chips, emptyTab, items, title } from "./data";
-import { PreferencesAppContext } from "../../context/Preferences";
 import "./HomeProducts.style.scss";
 
-const HomeProducts = () => {
-  const { languaje } = useContext(PreferencesAppContext);
+const HomeProducts = ({ languaje }) => {
   const [actualData, setActualData] = useState([]);
   const [chipActive, setChipActive] = useState("");
 

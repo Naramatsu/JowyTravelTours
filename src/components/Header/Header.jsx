@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Container from "../Container";
+import Container from "../../layout/Container";
 import { appLanguaje, appTheme, routeTabs } from "./data";
 import { BiGlobe } from "react-icons/bi";
 import { DARK, ENGLISH, LIGHT, SPANISH } from "../../utils/constants";

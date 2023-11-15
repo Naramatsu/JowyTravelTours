@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Container from "../Container";
+import Container from "../../layout/Container";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import "./Slider.style.scss";
 
@@ -8,11 +8,13 @@ const Slider = ({
   title,
   isFullWidth = false,
   size,
+  itemSize = 270,
   children,
 }) => {
   const refSlider = useRef(null);
   const percentaje = parseFloat(width) / 100;
   const [sliderLeft, setSliderLeft] = useState(0);
+  const [showControls, setShowControls] = useState(false);
   const [sliderLeftPixel, setSliderLeftPixel] = useState("0px");
   const [actualWidth, setActualWidth] = useState(
     window.innerWidth * percentaje
@@ -30,8 +32,14 @@ const Slider = ({
   }, [percentaje]);
 
   useEffect(() => {
-    setSliderLeftPixel(`${sliderLeft * 270}px`);
-  }, [sliderLeft]);
+    setSliderLeftPixel(`${sliderLeft * itemSize}px`);
+  }, [sliderLeft, itemSize]);
+
+  useEffect(() => {
+    setShowControls(
+      refSlider?.current?.offsetWidth >= size * itemSize ? false : true
+    );
+  }, [refSlider, size, itemSize, actualWidth]);
 
   const handlerShowNext = () => {
     if (sliderLeft < 0) setSliderLeft(sliderLeft + 1);
@@ -41,13 +49,11 @@ const Slider = ({
     if (rightActive()) setSliderLeft(sliderLeft - 1);
   };
 
-  const showControls = () => (actualWidth >= size * 270 ? false : true);
-
   const leftActive = () => (sliderLeft < 0 ? "active" : "");
 
   const rightActive = () => {
     const panelWidth = refSlider?.current?.offsetWidth || actualWidth;
-    return (size + sliderLeft) * 270 > panelWidth ? "active" : "";
+    return (size + sliderLeft) * itemSize > panelWidth ? "active" : "";
   };
 
   return (
@@ -55,7 +61,7 @@ const Slider = ({
       <Container className="app__slider__title" width="70%">
         <h2>{title}</h2>
         <aside className="app__slider__title__controls">
-          {showControls() && (
+          {showControls && (
             <>
               <BsArrowLeftShort
                 onClick={handlerShowNext}
