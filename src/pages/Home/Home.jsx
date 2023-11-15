@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
+import CardCity from "../../components/CardCity";
 import CardClientsTestimonials from "../../components/CardClientsTestimonials";
 import CardPresentation from "../../components/CardPresentation";
-import Container from "../../components/Container";
+import ContactUsPanel from "../../components/ContactUsPanel";
+import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
 import HomeProducts from "../../layout/HomeProducts";
@@ -9,8 +11,15 @@ import Slider from "../../components/Slider";
 import VideoPromo from "../../components/VideoPromo";
 import { PreferencesAppContext } from "../../context/Preferences";
 import {
+  citiesButtonText,
+  citiesItems,
+  citiesTitle,
   clientsTestimonials,
   clientsTestimonialsItems,
+  contactUsPanelButtonText,
+  contactUsPanelDescription,
+  contactUsPanelImg,
+  contactUsPanelTitle,
   mainSlogan,
   popularPlaces,
   popularPlacesItems,
@@ -18,7 +27,7 @@ import {
 import "./Home.style.scss";
 
 const Home = () => {
-  const { languaje } = useContext(PreferencesAppContext);
+  const { languaje, theme } = useContext(PreferencesAppContext);
   return (
     <>
       <Container
@@ -33,7 +42,7 @@ const Home = () => {
           <section className="home__main__section left">
             {mainSlogan[languaje]}
             <br />
-            <HomePanel />
+            <HomePanel languaje={languaje} />
           </section>
           <section className="home__main__section right">
             <img
@@ -58,8 +67,8 @@ const Home = () => {
         ))}
       </Slider>
       <Container width="70%">
-        <VideoPromo />
-        <HomeProducts />
+        <VideoPromo languaje={languaje} />
+        <HomeProducts languaje={languaje} />
       </Container>
       <Slider
         title={clientsTestimonials[languaje]}
@@ -67,9 +76,38 @@ const Home = () => {
         size={clientsTestimonialsItems.length}
       >
         {clientsTestimonialsItems.map((testimonial, index) => (
-          <CardClientsTestimonials key={index} items={testimonial} />
+          <CardClientsTestimonials
+            key={index}
+            items={testimonial}
+            languaje={languaje}
+            theme={theme}
+          />
         ))}
       </Slider>
+      <Slider
+        title={citiesTitle[languaje]}
+        size={citiesItems.length}
+        itemSize={370}
+      >
+        {citiesItems.map(({ img, city, title }, index) => (
+          <CardCity
+            key={index}
+            img={img}
+            city={city}
+            title={title[languaje]}
+            buttonText={citiesButtonText[languaje]}
+          />
+        ))}
+      </Slider>
+      <Container width="70%">
+        <ContactUsPanel
+          img={contactUsPanelImg}
+          title={contactUsPanelTitle[languaje]}
+          description={contactUsPanelDescription[languaje]}
+          buttonText={contactUsPanelButtonText[languaje]}
+          theme={theme}
+        />
+      </Container>
     </>
   );
 };
