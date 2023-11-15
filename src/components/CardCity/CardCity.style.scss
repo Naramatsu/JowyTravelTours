@@ -1,0 +1,69 @@
+@import "../../utils/utils.style.scss";
+
+.card__city {
+  position: relative;
+  width: 350px;
+  min-width: 350px;
+  max-width: 350px;
+  height: 400px;
+  min-height: 400px;
+  border-radius: $external-border-radius;
+
+  img {
+    position: relative;
+    border-radius: $external-border-radius;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    cursor: pointer;
+  }
+
+  &:hover > .card__city__caption button {
+    transition: 0.5s ease-out all;
+    opacity: 1;
+    margin-bottom: 65px;
+  }
+
+  .card__city__caption {
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    color: #fff;
+    transition: 0.5s ease-out all;
+    text-shadow: 0 0 2px rgba($color: #000000, $alpha: 1);
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 200;
+      transition: 0.5s ease-out all;
+      position: relative;
+    }
+
+    h3,
+    h4 {
+      position: relative;
+      margin: 0;
+      transition: 0.5s ease-out all;
+      font-size: 0.9rem;
+    }
+
+    button {
+      @include buttonOrangeGradient;
+      @include boxShadows;
+      @include fontShadows;
+      @include displayFlex;
+      border: none;
+      border-radius: $external-border-radius;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      margin-top: 10px;
+      opacity: 0;
+      position: relative;
+      transition: 0.5s ease-out all;
+    }
+  }
+}
