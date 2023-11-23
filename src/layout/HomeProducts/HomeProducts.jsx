@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import ChipsContainer from "../../components/ChipsContainer";
 import CardPresentation from "../../components/CardPresentation";
 import { CiWarning } from "react-icons/ci";
-import { chips, emptyTab, items, title } from "./data";
+import { btnShowMore, chips, emptyTab, items, title } from "./data";
 import "./HomeProducts.style.scss";
+
+const isHiddenButton = (val) => (val ? "hidden" : "");
 
 const HomeProducts = ({ languaje }) => {
   const [actualData, setActualData] = useState([]);
   const [chipActive, setChipActive] = useState("");
+  const [actualPage, setActualPage] = useState(1);
+
+  const isHiddenBtn = isHiddenButton(
+    actualData.length ===
+      items[languaje].filter((card) => card.tag === chipActive).length
+  );
 
   const handlerActiveChips = (item) => {
     if (chipActive !== item) setChipActive(item);
@@ -18,8 +26,12 @@ const HomeProducts = ({ languaje }) => {
   }, [languaje]);
 
   useEffect(() => {
-    setActualData(items[languaje].filter((card) => card.tag === chipActive));
-  }, [chipActive, languaje]);
+    setActualData(
+      items[languaje]
+        .filter((card) => card.tag === chipActive)
+        .slice(0, actualPage * 4)
+    );
+  }, [chipActive, languaje, actualPage]);
 
   return (
     <section className="app__home__products">
@@ -48,7 +60,12 @@ const HomeProducts = ({ languaje }) => {
           </section>
         )}
       </section>
-      <button>View All</button>
+      <button
+        className={isHiddenBtn}
+        onClick={() => setActualPage(actualPage + 1)}
+      >
+        {btnShowMore[languaje]}
+      </button>
     </section>
   );
 };

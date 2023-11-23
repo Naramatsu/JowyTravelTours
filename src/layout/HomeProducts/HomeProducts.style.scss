@@ -52,5 +52,9 @@
     padding: 1rem;
     margin: auto;
     margin-top: 40px;
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 }
