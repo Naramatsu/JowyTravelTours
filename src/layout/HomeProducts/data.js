@@ -39,11 +39,30 @@ export const items = {
 };
 
 export const chips = {
-  [SPANISH]: ["Hoteles", "Apartamentos", "Toures", "Pasadias", "Transporte"],
-  [ENGLISH]: ["Hotels", "Apartments", "Tours", "DayPass", "Transports"],
+  [SPANISH]: [
+    "Hoteles",
+    "Apartamentos",
+    "Toures",
+    "Pasadias",
+    "Transporte",
+    "Embarcaciones",
+  ],
+  [ENGLISH]: [
+    "Hotels",
+    "Apartments",
+    "Tours",
+    "DayPass",
+    "Transports",
+    "Ships",
+  ],
 };
 
 export const emptyTab = {
   [SPANISH]: "Actualmente no tenemos productos de esta categoria disponible",
   [ENGLISH]: "We currently do not have products in this category available",
+};
+
+export const btnShowMore = {
+  [SPANISH]: "Mostrar más",
+  [ENGLISH]: "Show more",
 };
