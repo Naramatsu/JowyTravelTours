@@ -87,6 +87,7 @@ const Home = () => {
       <Slider
         title={citiesTitle[languaje]}
         size={citiesItems.length}
+        width="70%"
         itemSize={370}
       >
         {citiesItems.map(({ img, city, title }, index) => (
