@@ -11,6 +11,7 @@ import "./Header.style.scss";
 const classNamePrefixComponent = "header";
 
 const Header = () => {
+  const isHiddenProductsTabs = true;
   const { languaje, theme, setLanguaje, setTheme } = useContext(
     PreferencesAppContext
   );
@@ -31,15 +32,17 @@ const Header = () => {
             <span>Jowy </span>Travel <span>& </span>Tours
           </Link>
         </h2>
-        <nav className={`${classNamePrefixComponent}__links`}>
-          <ul>
-            {routeTabs[languaje].map(({ link, label }, index) => (
-              <li key={index}>
-                <Link to={link}>{label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {!isHiddenProductsTabs && (
+          <nav className={`${classNamePrefixComponent}__links`}>
+            <ul>
+              {routeTabs[languaje].map(({ link, label }, index) => (
+                <li key={index}>
+                  <Link to={link}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
         <aside className={`${classNamePrefixComponent}__settings`}>
           <ul>
             <li onClick={handlerLanguaje}>
