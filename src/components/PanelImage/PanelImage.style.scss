@@ -1,0 +1,85 @@
+@import "../../utils/utils.style.scss";
+
+.app__panel__image {
+  background-color: $card-testimonial-light-bg;
+  border-radius: $external-border-radius;
+  height: 500px;
+  margin: 50px auto;
+  position: relative;
+
+  &.dark {
+    background-color: $card-testimonial-dark-bg;
+  }
+
+  img {
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+    &.right {
+      border-radius: 0 20px 20px 0;
+    }
+  }
+
+  .app__panel__image__container {
+    margin: auto;
+    position: relative;
+    width: 90%;
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    button {
+      @include buttonOrangeGradient;
+      @include boxShadows;
+      @include fontShadows;
+      @include displayFlex;
+      border: none;
+      border-radius: $external-border-radius;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 30px;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .app__panel__image {
+    .app__panel__image__container {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .app__panel__image {
+    display: block !important;
+    height: auto;
+    position: relative;
+    text-align: center;
+
+    img {
+      border-radius: 20px 20px 0 0;
+      height: 300px;
+    }
+
+    .app__panel__image__container {
+      padding: 20px 0;
+      button {
+        margin: auto;
+      }
+    }
+  }
+}
