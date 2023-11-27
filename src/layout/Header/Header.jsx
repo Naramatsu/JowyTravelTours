@@ -43,7 +43,7 @@ const Header = () => {
             </ul>
           </nav>
         )}
-        <aside className={`${classNamePrefixComponent}__settings`}>
+        <aside className={`${classNamePrefixComponent}__settings ${theme}`}>
           <ul>
             <li onClick={handlerLanguaje}>
               <BiGlobe />
