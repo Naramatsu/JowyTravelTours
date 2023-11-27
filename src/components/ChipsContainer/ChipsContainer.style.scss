@@ -2,13 +2,13 @@
 
 .chip__container {
   @include displayFlex;
-  position: relative;
-  padding: 20px;
-  margin-top: 30px;
   background-color: $chip-gb-container;
   border-radius: 50px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: 30px;
+  padding: 20px;
+  position: relative;
 
   &.dark {
     background-color: $chip-gb-container;
@@ -28,17 +28,17 @@
 
   .app__chip {
     @include displayFlex;
-    width: min-content;
-    padding: 5px;
-    border-radius: 25px;
-    padding-right: 20px;
     background-color: $chip-gb;
+    border-radius: 25px;
     cursor: pointer;
+    padding: 5px;
+    padding-right: 20px;
+    width: min-content;
 
     svg {
       background-color: $chip-gb-icon;
-      padding: 10px;
       border-radius: 50%;
+      padding: 10px;
     }
 
     &.active {

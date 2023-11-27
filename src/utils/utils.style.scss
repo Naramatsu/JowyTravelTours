@@ -60,6 +60,10 @@
   transform: translateY(-50%);
 }
 
+@mixin boxShadows {
+  box-shadow: 6px 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
 $oragen-color: #ff5c2a;
 $gray-lighter-color: #757679;
 $gray-header-bg: #f1f5f5;
@@ -72,6 +76,10 @@ $chip-gb-container: #0f1c21;
 $card-testimonial-light-bg: #f8f8f8;
 $card-testimonial-dark-bg: #021c26;
 $star-fill-color: #ff9900;
+$shape-yellow-color: #ffc03c;
+$shape-green-color: #69bd5a;
+$shape-mint-color: #2fc3c8;
+$shape-blue-color: #298bfe;
 
 $dark-color: #081519;
 $dark-front-color: #183037;

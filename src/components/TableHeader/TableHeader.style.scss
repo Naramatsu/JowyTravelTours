@@ -19,9 +19,9 @@ table {
       background-color: $gray-header-bg;
       color: $gray-header-text;
       cursor: pointer;
+      font-size: 0.75rem;
       font-weight: 400;
       padding: 1.25rem 1rem;
-      font-size: 0.75rem;
 
       &:nth-child(1) {
         border-radius: 20px 0 0 0;

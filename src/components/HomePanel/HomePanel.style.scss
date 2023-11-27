@@ -1,12 +1,12 @@
 @import "../../utils/utils.style.scss";
 
 .home__panel {
+  background-color: #fff;
   border-radius: $external-border-radius;
   bottom: 7px;
   box-shadow: $box-shadows00200;
   position: absolute;
   width: min-content;
-  background-color: #fff;
 
   .home__panel__container {
     margin-top: 10px;
@@ -37,11 +37,11 @@
       border: none;
       border-radius: $external-border-radius;
       color: #fff;
+      cursor: pointer;
       font-size: 1rem;
       font-weight: 500;
       padding: 1rem;
       width: 100%;
-      cursor: pointer;
 
       svg {
         font-weight: bold;
@@ -56,8 +56,8 @@
   gap: 15px;
 
   label {
-    font-weight: bold;
     color: #000;
+    font-weight: bold;
   }
 
   .input__control__field {
@@ -73,6 +73,18 @@
 
     svg {
       @include svgFloat;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .home__panel {
+    display: block;
+    width: 100% !important;
+
+    .table__header {
+      overflow-x: auto;
+      width: 100%;
     }
   }
 }

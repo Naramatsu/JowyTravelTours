@@ -1,8 +1,8 @@
 @import "../../utils/utils.style.scss";
 
 .app__home__products {
-  position: relative;
   margin-top: 50px;
+  position: relative;
 
   h2 {
     font-size: 2.5em;
@@ -15,24 +15,24 @@
     @include displayFlex;
     flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
+    justify-content: space-between;
     margin: auto;
     margin-top: 40px;
-    justify-content: space-between;
+    width: 100%;
 
     .empty__label {
-      text-align: center;
-      width: 100%;
       font-size: 1.25rem;
       font-weight: 500;
+      text-align: center;
+      width: 100%;
 
       p {
         margin-top: 0;
       }
 
       svg {
-        font-size: 4rem;
         color: $oragen-color;
+        font-size: 4rem;
       }
     }
   }
@@ -45,16 +45,24 @@
     border: none;
     border-radius: 50px;
     color: #fff;
+    cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
-    cursor: pointer;
-    width: 200px;
-    padding: 1rem;
     margin: auto;
     margin-top: 40px;
+    padding: 1rem;
+    width: 200px;
 
     &.hidden {
       opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .app__home__products {
+    .app__home__products__container {
+      justify-content: center;
     }
   }
 }
