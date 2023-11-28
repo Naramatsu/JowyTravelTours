@@ -1,0 +1,118 @@
+@import "../../utils/utils.style.scss";
+
+.footer {
+  background-color: $dark-color;
+  color: $gray-lighter-color;
+  margin-top: 50px;
+  padding-top: 50px;
+  position: relative;
+
+  .footer__container {
+    position: relative;
+
+    .footer__info {
+      position: relative;
+
+      section {
+        h3 {
+          color: #fff;
+          font-stretch: condensed;
+          font-weight: 600;
+
+          &.title {
+            font-weight: 800;
+          }
+
+          span {
+            color: $oragen-color;
+            font-stretch: condensed;
+            font-weight: 800;
+          }
+        }
+
+        &.usefull_links {
+          padding-left: 2em;
+          text-align: center;
+
+          h4 {
+            color: #fff;
+          }
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+              a {
+                @include linkNoVisited($gray-lighter-color);
+              }
+            }
+          }
+        }
+
+        &.chat-with-me {
+          text-align: center;
+
+          .footer__icons {
+            @include displayFlex;
+            position: relative;
+
+            a {
+              height: 40px;
+              width: 40px;
+
+              &:nth-child(1) {
+                transform: scale(1.2);
+              }
+
+              svg {
+                background-color: $dark-color;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 40px;
+                transform: rotate(0deg);
+                transition: ease-in-out all 0.5s;
+
+                &:hover {
+                  transform: rotate(360deg);
+                  transition: ease-in-out all 0.5s;
+
+                  path {
+                    color: $oragen-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer__copyright {
+      border-top: solid 1px $gray-lighter-color;
+      margin-top: 50px;
+      text-align: center;
+
+      p {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .footer {
+    .footer__container {
+      .footer__info {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+
+        .usefull_links {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+}
