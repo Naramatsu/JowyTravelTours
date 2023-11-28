@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import CardCity from "../../components/CardCity";
 import CardClientsTestimonials from "../../components/CardClientsTestimonials";
 import CardPresentation from "../../components/CardPresentation";
-import ContactUsPanel from "../../components/ContactUsPanel";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import HomePanel from "../../components/HomePanel";
 import HomeProducts from "../../layout/HomeProducts";
+import PanelImage from "../../components/PanelImage";
 import Slider from "../../components/Slider";
 import VideoPromo from "../../components/VideoPromo";
 import { PreferencesAppContext } from "../../context/Preferences";
@@ -101,7 +101,7 @@ const Home = () => {
         ))}
       </Slider>
       <Container width="70%">
-        <ContactUsPanel
+        <PanelImage
           img={contactUsPanelImg}
           title={contactUsPanelTitle[languaje]}
           description={contactUsPanelDescription[languaje]}
