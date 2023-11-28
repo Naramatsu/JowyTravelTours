@@ -1,0 +1,63 @@
+@import "../../utils/utils.style.scss";
+
+.shape__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+
+  .shape {
+    border-radius: 32% 68% 58% 42% / 58% 57% 43% 42%;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+      2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: 70px;
+    position: relative;
+    width: 70px;
+
+    label {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      left: 50%;
+      position: absolute;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .shape__caption {
+    color: $gray-lighter-color;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.shape__container:nth-child(1),
+.whyUs__panel:nth-child(1) {
+  .shape {
+    background-color: $shape-yellow-color;
+  }
+}
+
+.shape__container:nth-child(2),
+.whyUs__panel:nth-child(2) {
+  .shape {
+    background-color: $shape-green-color;
+  }
+}
+
+.shape__container:nth-child(3),
+.whyUs__panel:nth-child(3) {
+  .shape {
+    background-color: $shape-mint-color;
+  }
+}
+
+.shape__container:nth-child(4),
+.whyUs__panel:nth-child(4) {
+  .shape {
+    background-color: $shape-blue-color;
+  }
+}
