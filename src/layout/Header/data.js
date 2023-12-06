@@ -7,11 +7,7 @@ export const routeTabs = {
       link: "/hosting",
       label: "Hospedaje",
     },
-    {
-      link: "/daypass",
-      label: "Pasadias",
-    },
-    {
+    +{
       link: "/tours",
       label: "Tours",
     },
