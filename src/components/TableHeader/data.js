@@ -1,8 +1,8 @@
 import { ENGLISH, SPANISH } from "../../utils/constants";
 
 export const tableHeaders = {
-  [SPANISH]: ["Hospedaje", "Pasadias", "Tours", "Transportes", "Embarcaciones"],
-  [ENGLISH]: ["Hosting", "Day-pass", "Tours", "Transports", "Ships"],
+  [SPANISH]: ["Hospedaje", "Tours", "Transportes", "Embarcaciones"],
+  [ENGLISH]: ["Hosting", "Tours", "Transports", "Ships"],
 };
 
 export const activeTabInitialState = {
