@@ -4,10 +4,12 @@
   @include boxShadows;
   border-radius: $external-border-radius;
   height: 350px;
-  max-width: 250px;
   min-width: 250px;
+  min-width: 250px;
+  overflow: hidden;
   position: relative;
-  width: 250px;
+  transition: ease-in-out 0.5s all;
+  width: 100%;
 
   .brightness {
     backdrop-filter: brightness(0.8);
@@ -17,6 +19,11 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  &:hover > img {
+    transform: scale(1.3) rotate(-10deg) !important;
+    transition: ease-in-out 0.5s all;
   }
 
   .card__presentation__rating {
@@ -47,6 +54,7 @@
     object-fit: cover;
     position: absolute;
     top: 0;
+    transition: ease-in-out 0.5s all;
     width: 100%;
   }
 
@@ -87,5 +95,11 @@
       right: 10px;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+
+@media (max-width: 550px) {
+  .card__presentation {
+    max-width: 250px;
   }
 }

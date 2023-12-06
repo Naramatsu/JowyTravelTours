@@ -63,8 +63,9 @@
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 1024px) {
   .app__panel__image {
+    border-radius: $external-border-radius;
     display: block !important;
     height: auto;
     position: relative;
@@ -73,10 +74,16 @@
     img {
       border-radius: 20px 20px 0 0;
       height: 300px;
+
+      &.right {
+        border-radius: 0 0 20px 20px;
+        display: none;
+      }
     }
 
     .app__panel__image__container {
       padding: 20px 0;
+
       button {
         margin: auto;
       }
