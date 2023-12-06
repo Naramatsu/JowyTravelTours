@@ -1,5 +1,18 @@
 @import "../../utils/utils.style.scss";
 
+.panelVisible {
+  opacity: 1;
+  position: relative;
+  transform: scale(1);
+  transition: ease-in-out 0.5s all;
+}
+
+.panelHidden {
+  opacity: 0;
+  position: absolute;
+  transform: scale(0);
+}
+
 .chip__container {
   @include displayFlex;
   background-color: $chip-gb-container;
@@ -12,6 +25,14 @@
 
   &.dark {
     background-color: $chip-gb-container;
+
+    .app__chip {
+      background-color: $chip-gb;
+
+      svg {
+        background-color: $chip-gb-icon;
+      }
+    }
   }
 
   &.light {
@@ -28,15 +49,18 @@
 
   .app__chip {
     @include displayFlex;
-    background-color: $chip-gb;
     border-radius: 25px;
     cursor: pointer;
     padding: 5px;
     padding-right: 20px;
-    width: min-content;
+    position: relative;
+    width: max-content;
+
+    .close {
+      @extend .panelVisible;
+    }
 
     svg {
-      background-color: $chip-gb-icon;
       border-radius: 50%;
       padding: 10px;
     }
@@ -49,6 +73,53 @@
       svg {
         background-color: #fff;
         color: #000;
+      }
+    }
+
+    &.close {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  }
+
+  &.visible {
+    overflow: hidden;
+
+    .app__chip {
+      @extend .panelHidden;
+
+      &.active {
+        position: relative;
+        @extend .panelVisible;
+      }
+    }
+
+    .chip__sublist {
+      @include displayFlex;
+      border-left: solid 2px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 20px;
+
+      .app__chip {
+        @extend .app__chip;
+        display: flex;
+        opacity: 1;
+        position: relative;
+        transform: scale(1);
+        transition: ease-in-out 0.5s all;
+      }
+    }
+  }
+
+  &.hidden {
+    .chip__sublist {
+      @include displayFlex;
+      @include displayFlex;
+
+      .app__chip {
+        @include displayFlex;
+        @extend .panelHidden;
       }
     }
   }
