@@ -55,9 +55,9 @@ const Home = () => {
       <Slider
         width="70%"
         title={popularPlaces[languaje]}
-        size={popularPlacesItems.length}
+        size={popularPlacesItems[languaje].length}
       >
-        {popularPlacesItems.map((place, index) => (
+        {popularPlacesItems[languaje].map((place, index) => (
           <CardPresentation
             key={index}
             img={place.img}
