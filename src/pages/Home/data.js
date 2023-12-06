@@ -32,13 +32,82 @@ export const popularPlaces = {
   [ENGLISH]: "Popular Places",
 };
 
-export const popularPlacesItems = Array(6).fill({
-  img: "https://www.civitatis.com/f/colombia/cartagena-de-indias/excursion-playa-blanca-589x392.jpg",
-  info: {
-    name: "Playa blanca",
-    location: "Cartagena - Baru",
-  },
-});
+export const popularPlacesItems = {
+  [SPANISH]: [
+    {
+      img: "https://www.cartagena-indias.com/Lugares/Images/castillo-san-felipe.jpg",
+      info: {
+        name: "Castillo San Felipe",
+        location: "Cartagena",
+      },
+    },
+    {
+      img: "https://www.baytours.com.co/wp-content/uploads/2019/01/playa-blanca-baru.jpg",
+      info: {
+        name: "Playa blanca",
+        location: "Barú",
+      },
+    },
+    {
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg/640px-Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg",
+      info: {
+        name: "Palenque",
+        location: "Mahates",
+      },
+    },
+    {
+      img: "https://weekend-bucket.s3.amazonaws.com/Desde_Bucaramanga_Parque_Tayrona_1_52ca91e004.jpg",
+      info: {
+        name: "Parque Tayrona",
+        location: "Santa Marta",
+      },
+    },
+    {
+      img: "https://expotur-eco.com/wp-content/uploads/2019/08/cropped-Salinas-de-Galerazamba-mar-rosado-en-colombia.jpg",
+      info: {
+        name: "Mar rosado",
+        location: "Barranquilla",
+      },
+    },
+  ],
+  [ENGLISH]: [
+    {
+      img: "https://www.cartagena-indias.com/Lugares/Images/castillo-san-felipe.jpg",
+      info: {
+        name: "San Felipe Castle",
+        location: "Cartagena",
+      },
+    },
+    {
+      img: "https://www.baytours.com.co/wp-content/uploads/2019/01/playa-blanca-baru.jpg",
+      info: {
+        name: "Playa blanca",
+        location: "Barú",
+      },
+    },
+    {
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg/640px-Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg",
+      info: {
+        name: "Palenque",
+        location: "Mahates",
+      },
+    },
+    {
+      img: "https://weekend-bucket.s3.amazonaws.com/Desde_Bucaramanga_Parque_Tayrona_1_52ca91e004.jpg",
+      info: {
+        name: "Tayrona Park",
+        location: "Santa Marta",
+      },
+    },
+    {
+      img: "https://expotur-eco.com/wp-content/uploads/2019/08/cropped-Salinas-de-Galerazamba-mar-rosado-en-colombia.jpg",
+      info: {
+        name: "Mar rosado",
+        location: "Barranquilla",
+      },
+    },
+  ],
+};
 
 export const clientsTestimonials = {
   [SPANISH]: "Testimonios de clientes",
