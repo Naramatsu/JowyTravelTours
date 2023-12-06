@@ -1,37 +1,71 @@
 import React, { useState, useEffect } from "react";
 import ChipsContainer from "../../components/ChipsContainer";
+import Grid from "../../layout/Grid";
 import CardPresentation from "../../components/CardPresentation";
 import { CiWarning } from "react-icons/ci";
-import { btnShowMore, chips, emptyTab, items, title } from "./data";
+import { btnShowMore, chips, emptyTab, subChips, title } from "./data";
 import "./HomeProducts.style.scss";
+import { items } from "./productsList.data";
 
 const isHiddenButton = (val) => (val ? "hidden" : "");
 
 const HomeProducts = ({ languaje }) => {
   const [actualData, setActualData] = useState([]);
   const [chipActive, setChipActive] = useState("");
+  const [subChipActive, setSubChipActive] = useState("");
   const [actualPage, setActualPage] = useState(1);
 
-  const isHiddenBtn = isHiddenButton(
-    actualData.length ===
-      items[languaje].filter((card) => card.tag === chipActive).length
-  );
+  const isHiddenBtn = () => {
+    if (subChipActive) {
+      return isHiddenButton(
+        actualData.length ===
+          items[languaje].filter((card) => card.info.type === subChipActive)
+            .length
+      );
+    } else {
+      return isHiddenButton(
+        actualData.length ===
+          items[languaje].filter((card) => card.type === chipActive).length
+      );
+    }
+  };
 
   const handlerActiveChips = (item) => {
-    if (chipActive !== item) setChipActive(item);
+    if (chipActive !== item) {
+      setChipActive(item);
+    } else {
+      handlerClearChips();
+    }
+  };
+
+  const handlerActiveSubChips = (item) => {
+    if (subChipActive !== item) setSubChipActive(item);
+  };
+
+  const handlerClearChips = () => {
+    setChipActive("");
+    setSubChipActive("");
   };
 
   useEffect(() => {
-    setChipActive(chips[languaje][0]);
-  }, [languaje]);
-
-  useEffect(() => {
-    setActualData(
-      items[languaje]
-        .filter((card) => card.tag === chipActive)
-        .slice(0, actualPage * 4)
-    );
-  }, [chipActive, languaje, actualPage]);
+    if (chipActive) {
+      if (subChipActive) {
+        setActualData(
+          items[languaje]
+            .filter((card) => card.info.type === subChipActive)
+            .slice(0, actualPage * 8)
+        );
+      } else {
+        setActualData(
+          items[languaje]
+            .filter((card) => card.type === chipActive)
+            .slice(0, actualPage * 8)
+        );
+      }
+    } else {
+      setActualData(items[languaje].slice(0, actualPage * 8));
+    }
+  }, [chipActive, languaje, actualPage, subChipActive]);
 
   return (
     <section className="app__home__products">
@@ -39,9 +73,12 @@ const HomeProducts = ({ languaje }) => {
       <ChipsContainer
         chips={chips[languaje]}
         chipActive={chipActive}
+        subChipActive={subChipActive}
         onSelectChip={handlerActiveChips}
+        onSelectSubChip={handlerActiveSubChips}
+        subChips={subChips[languaje]}
       />
-      <section className="app__home__products__container">
+      <Grid columns={4} className="app__home__products__container container">
         {actualData.length ? (
           actualData.map((item, index) => (
             <CardPresentation
@@ -59,9 +96,9 @@ const HomeProducts = ({ languaje }) => {
             <p>{emptyTab[languaje]}</p>
           </section>
         )}
-      </section>
+      </Grid>
       <button
-        className={isHiddenBtn}
+        className={isHiddenBtn()}
         onClick={() => setActualPage(actualPage + 1)}
       >
         {btnShowMore[languaje]}

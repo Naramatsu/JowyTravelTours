@@ -15,46 +15,24 @@ export const title = {
   ),
 };
 
-export const items = {
-  [SPANISH]: Array(8).fill({
-    img: "https://www.civitatis.com/f/colombia/cartagena-de-indias/excursion-playa-blanca-589x392.jpg",
-    info: {
-      name: "Playa blanca",
-      location: "Cartagena - Baru",
-    },
-    price: "120.000COP",
-    rating: "4.7",
-    tag: "Hoteles",
-  }),
-  [ENGLISH]: Array(8).fill({
-    img: "https://www.civitatis.com/f/colombia/cartagena-de-indias/excursion-playa-blanca-589x392.jpg",
-    info: {
-      name: "Playa blanca",
-      location: "Cartagena - Baru",
-    },
-    price: "120.000COP",
-    rating: "4.7",
-    tag: "Hotels",
-  }),
+export const chips = {
+  [SPANISH]: ["Hospedaje", "Toures", "Transporte", "Embarcaciones"],
+  [ENGLISH]: ["Hosting", "Tours", "Transports", "Ships"],
 };
 
-export const chips = {
-  [SPANISH]: [
-    "Hoteles",
-    "Apartamentos",
-    "Toures",
-    "Pasadias",
-    "Transporte",
-    "Embarcaciones",
-  ],
-  [ENGLISH]: [
-    "Hotels",
-    "Apartments",
-    "Tours",
-    "DayPass",
-    "Transports",
-    "Ships",
-  ],
+export const subChips = {
+  [SPANISH]: {
+    Hospedaje: ["Apartamentos", "Hoteles", "Cabañas", "Casas", "Casa Finca"],
+    Toures: ["Toures", "Pasadías"],
+    Transporte: ["Automóviles", "Vans", "Busetas", "Chivas", "Alquiler"],
+    Embarcaciones: ["Lanchas deportivas", "Yates"],
+  },
+  [ENGLISH]: {
+    Hosting: ["Apartments", "Hotels", "Cabins", "Houses", "Farm House"],
+    Tours: ["Tours", "Daypass"],
+    Transports: ["Automobiles", "Vans", "Buses", "Chivas", "Rental"],
+    Ships: ["Sports boats", "Yachts"],
+  },
 };
 
 export const emptyTab = {
