@@ -56,6 +56,13 @@ export const popularPlacesItems = {
       },
     },
     {
+      img: "https://www.eluniversal.com.co/binrepository/933x700/0c0/0d0/none/13704/HXMI/volcan-del-totumo_5867681_20220216115142.jpg",
+      info: {
+        name: "Volcán del Totumo",
+        location: "Santa Catalina",
+      },
+    },
+    {
       img: "https://weekend-bucket.s3.amazonaws.com/Desde_Bucaramanga_Parque_Tayrona_1_52ca91e004.jpg",
       info: {
         name: "Parque Tayrona",
@@ -97,6 +104,13 @@ export const popularPlacesItems = {
       info: {
         name: "Tayrona Park",
         location: "Santa Marta",
+      },
+    },
+    {
+      img: "https://www.eluniversal.com.co/binrepository/933x700/0c0/0d0/none/13704/HXMI/volcan-del-totumo_5867681_20220216115142.jpg",
+      info: {
+        name: "Volcán del Totumo",
+        location: "Santa Catalina",
       },
     },
     {
