@@ -19,13 +19,13 @@ const HomeProducts = ({ languaje }) => {
     if (subChipActive) {
       return isHiddenButton(
         actualData.length ===
-          items[languaje].filter((card) => card.info.type === subChipActive)
+          items(languaje).filter((card) => card.info.type === subChipActive)
             .length
       );
     } else {
       return isHiddenButton(
         actualData.length ===
-          items[languaje].filter((card) => card.type === chipActive).length
+          items(languaje).filter((card) => card.type === chipActive).length
       );
     }
   };
@@ -48,24 +48,29 @@ const HomeProducts = ({ languaje }) => {
   };
 
   useEffect(() => {
+    handlerClearChips();
+    setActualPage(1);
+  }, [languaje]);
+
+  useEffect(() => {
     if (chipActive) {
       if (subChipActive) {
         setActualData(
-          items[languaje]
+          items(languaje)
             .filter((card) => card.info.type === subChipActive)
             .slice(0, actualPage * 8)
         );
       } else {
         setActualData(
-          items[languaje]
+          items(languaje)
             .filter((card) => card.type === chipActive)
             .slice(0, actualPage * 8)
         );
       }
     } else {
-      setActualData(items[languaje].slice(0, actualPage * 8));
+      setActualData(items(languaje).slice(0, actualPage * 8));
     }
-  }, [chipActive, languaje, actualPage, subChipActive]);
+  }, [languaje, chipActive, actualPage, subChipActive]);
 
   return (
     <section className="app__home__products">

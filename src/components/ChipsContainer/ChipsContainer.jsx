@@ -17,7 +17,7 @@ const ChipsContainer = ({
   const [subProductList, setSubProductList] = useState([]);
 
   useEffect(() => {
-    if (chipActive) setSubProductList(subChips[chipActive]);
+    if (chipActive) setSubProductList(subChips[chipActive] || []);
   }, [chips, subChips, chipActive]);
 
   const isVisibleMainList = chipActive ? "visible" : "hidden";

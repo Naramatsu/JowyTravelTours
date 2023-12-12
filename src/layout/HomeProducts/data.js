@@ -1,4 +1,24 @@
-import { ENGLISH, SPANISH } from "../../utils/constants";
+import {
+  APARTMENTS,
+  AUTOMOBILES,
+  BUSES,
+  CABINS,
+  CHIVAS,
+  DAYPASS,
+  ENGLISH,
+  FARM_HOUSES,
+  HOSTING,
+  HOTELS,
+  HOUSES,
+  RENTALS,
+  SHIPS,
+  SPANISH,
+  SPORT_BOAT,
+  TOURS,
+  TRANSPORTS,
+  VANS,
+  YACHTS,
+} from "../../utils/constants";
 
 export const title = {
   [SPANISH]: (
@@ -15,24 +35,43 @@ export const title = {
   ),
 };
 
+const subChipsGenerator = (languaje, type) => {
+  if (type === "chips") {
+    return [
+      HOSTING[languaje],
+      TOURS[languaje],
+      TRANSPORTS[languaje],
+      SHIPS[languaje],
+    ];
+  }
+  return {
+    [HOSTING[languaje]]: [
+      APARTMENTS[languaje],
+      HOTELS[languaje],
+      CABINS[languaje],
+      HOUSES[languaje],
+      FARM_HOUSES[languaje],
+    ],
+    [TOURS[languaje]]: [TOURS[languaje], DAYPASS[languaje]],
+    [TRANSPORTS[languaje]]: [
+      AUTOMOBILES[languaje],
+      VANS[languaje],
+      BUSES[languaje],
+      CHIVAS[languaje],
+      RENTALS[languaje],
+    ],
+    [SHIPS[languaje]]: [SPORT_BOAT[languaje], YACHTS[languaje]],
+  };
+};
+
 export const chips = {
-  [SPANISH]: ["Hospedaje", "Toures", "Transporte", "Embarcaciones"],
-  [ENGLISH]: ["Hosting", "Tours", "Transports", "Ships"],
+  [SPANISH]: subChipsGenerator(SPANISH, "chips"),
+  [ENGLISH]: subChipsGenerator(ENGLISH, "chips"),
 };
 
 export const subChips = {
-  [SPANISH]: {
-    Hospedaje: ["Apartamentos", "Hoteles", "Cabañas", "Casas", "Casa Finca"],
-    Toures: ["Toures", "Pasadías"],
-    Transporte: ["Automóviles", "Vans", "Busetas", "Chivas", "Alquiler"],
-    Embarcaciones: ["Lanchas deportivas", "Yates"],
-  },
-  [ENGLISH]: {
-    Hosting: ["Apartments", "Hotels", "Cabins", "Houses", "Farm House"],
-    Tours: ["Tours", "Daypass"],
-    Transports: ["Automobiles", "Vans", "Buses", "Chivas", "Rental"],
-    Ships: ["Sports boats", "Yachts"],
-  },
+  [SPANISH]: subChipsGenerator(SPANISH),
+  [ENGLISH]: subChipsGenerator(ENGLISH),
 };
 
 export const emptyTab = {
