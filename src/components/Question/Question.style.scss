@@ -1,0 +1,61 @@
+@import "../../utils/utils.style.scss";
+
+.frequentquestions__list__question {
+  position: relative;
+  margin-bottom: 20px;
+
+  .accordion {
+    background-color: $card-testimonial-light-bg;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+
+    .question {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      gap: 10px;
+
+      label {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $shape-blue-color;
+      }
+    }
+
+    &.active,
+    &:hover {
+      background-color: #ccc;
+    }
+
+    &.active {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &.active ~ .panel {
+      transition: max-height 0.4s ease-in;
+      max-height: 300px;
+    }
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 18px;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    border-radius: 0 0 10px 10px;
+  }
+}

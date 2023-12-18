@@ -39,7 +39,7 @@ export const usefulLinksItems = {
       label: "Sobre Nosotros",
     },
     {
-      link: "/frequentsquestions",
+      link: "/frequentquestions",
       label: "Preguntas Frecuentes",
     },
   ],
@@ -57,7 +57,7 @@ export const usefulLinksItems = {
       label: "About Us",
     },
     {
-      link: "/frequentsquestions",
+      link: "/frequentquestions",
       label: "Frequents Questions",
     },
   ],
