@@ -4,14 +4,14 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const footerDescription = {
   [SPANISH]: (
-    <p>
+    <p className="title__description">
       Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
       de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
       industrias desde el año 1500
     </p>
   ),
   [ENGLISH]: (
-    <p>
+    <p className="title__description">
       Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
       de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
       industrias desde el año 1500
@@ -38,6 +38,10 @@ export const usefulLinksItems = {
       link: "/aboutus",
       label: "Sobre Nosotros",
     },
+    {
+      link: "/frequentsquestions",
+      label: "Preguntas Frecuentes",
+    },
   ],
   [ENGLISH]: [
     {
@@ -52,12 +56,16 @@ export const usefulLinksItems = {
       link: "/aboutus",
       label: "About Us",
     },
+    {
+      link: "/frequentsquestions",
+      label: "Frequents Questions",
+    },
   ],
 };
 
 export const ourSocialMedia = {
-  [SPANISH]: "Nuestras redes sociales",
-  [ENGLISH]: "Our social media",
+  [SPANISH]: "Redes sociales",
+  [ENGLISH]: "Social media",
 };
 
 export const ourSocialMediaItems = [
