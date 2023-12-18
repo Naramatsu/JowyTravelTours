@@ -64,6 +64,15 @@
   box-shadow: 6px 2px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+.title__color {
+  background: -webkit-linear-gradient(
+    rgba(255, 139, 77, 1),
+    rgba(255, 80, 33, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 $oragen-color: #ff5c2a;
 $gray-lighter-color: #757679;
 $gray-header-bg: #f1f5f5;

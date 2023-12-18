@@ -87,3 +87,9 @@ export const YACHTS = {
   [SPANISH]: "Sports boats",
   [ENGLISH]: "Yachts",
 };
+
+export const imgBanner =
+  "https://w0.peakpx.com/wallpaper/621/721/HD-wallpaper-playa-de-bocagrande-cartagena-colombia-beach-sand-graphy-travel-nature-sunset.jpg";
+
+export const celphone = "(+57) 317 8559 796";
+export const hours = "7am - 9pm EST";
