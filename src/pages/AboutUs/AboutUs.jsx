@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
 import { PreferencesAppContext } from "../../context/Preferences";
 import {
@@ -16,7 +17,6 @@ import Shape from "../../components/Shape";
 import Arrow from "../../assets/arrow.png";
 import "./AboutUs.style.scss";
 import { imgBanner } from "../../utils/constants";
-import BannerPage from "../../components/BannerPage/BannerPage";
 
 const AboutUs = () => {
   const { theme, languaje } = useContext(PreferencesAppContext);
