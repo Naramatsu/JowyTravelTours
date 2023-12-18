@@ -57,14 +57,6 @@
   }
 }
 
-@media (max-width: 1169px) {
-  .home__container {
-    .app__grid {
-      padding-top: 150px;
-    }
-  }
-}
-
 @media (max-width: 1375px) {
   .home__container {
     background-image: var(--bg) !important;
@@ -111,6 +103,14 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .home__container {
+    .app__grid {
+      padding-top: 150px;
     }
   }
 }
