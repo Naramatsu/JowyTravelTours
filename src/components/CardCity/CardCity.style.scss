@@ -11,13 +11,10 @@
   width: 350px;
 
   img {
+    @include imgBrightness;
     border-radius: $external-border-radius;
     cursor: pointer;
-    filter: brightness(0.5);
-    height: 100%;
-    object-fit: cover;
     position: relative;
-    width: 100%;
   }
 
   &:hover > .card__city__caption button {

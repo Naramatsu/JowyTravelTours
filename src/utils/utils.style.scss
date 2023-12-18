@@ -1,3 +1,10 @@
+@mixin imgBrightness {
+  filter: brightness(0.5);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 @mixin linkNoVisited($color) {
   color: $color;
   text-decoration: none;
