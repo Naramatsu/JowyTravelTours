@@ -87,12 +87,14 @@ const HomeProducts = ({ languaje }) => {
         {actualData.length ? (
           actualData.map((item, index) => (
             <CardPresentation
+              id={item.id}
               key={index}
               img={item.img}
               name={item.info.name}
               location={item.info.location}
               price={item.price}
               rating={item.rating}
+              viewDetails
             />
           ))
         ) : (
