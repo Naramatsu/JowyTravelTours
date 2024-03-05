@@ -26,14 +26,13 @@ h3 {
     }
 
     .working__hours {
-      margin-top: 50px;
-      text-align: center;
       display: flex;
       flex-direction: column;
+      margin-top: 50px;
+      text-align: center;
 
       p {
         margin: 0;
-        font-size: 0.9rem;
 
         &:nth-child(1) {
           text-transform: uppercase;
@@ -41,9 +40,9 @@ h3 {
       }
 
       h5 {
-        margin: 5px auto;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-weight: bold;
+        margin: 5px auto;
       }
     }
   }
@@ -59,7 +58,6 @@ h3 {
     .contactus__container__form__panel {
       background-color: $gray-header-bg;
       border-radius: 20px;
-      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
       gap: 30px;
       margin-top: 50px;
       padding: 3em;
@@ -75,7 +73,6 @@ h3 {
         text-align: left;
 
         p {
-          font-size: 0.75rem;
           margin: 5px auto;
         }
 
@@ -84,8 +81,8 @@ h3 {
           border: none;
           border-radius: 10px;
           padding: 1em;
-          width: -webkit-fill-available;
           position: relative;
+          width: -webkit-fill-available;
         }
 
         &.textfield__message {
@@ -105,14 +102,12 @@ h3 {
 
           .sendmessage__btn {
             @include buttonOrangeGradient;
-            @include boxShadows;
             @include fontShadows;
             @include displayFlex;
             border: none;
             border-radius: $external-border-radius;
             color: #fff;
             cursor: pointer;
-            font-size: 0.9rem;
             font-weight: 500;
             padding: 1rem 2rem;
             position: relative;
@@ -125,7 +120,7 @@ h3 {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 720px) {
   .contactus {
     .contactus__container {
       .contactus__container__title {

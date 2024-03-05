@@ -4,7 +4,6 @@ import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import { celphone, hours, imgBanner } from "../../utils/constants";
 import { PreferencesAppContext } from "../../context/Preferences";
-import "./ConctactUs.style.scss";
 import {
   btnSend,
   formInputs,
@@ -12,7 +11,8 @@ import {
   requiredHolder,
   title,
   workingHours,
-} from "./data";
+} from "./ConctactUs.data";
+import "./ConctactUs.style.scss";
 
 const ConctactUs = () => {
   const { theme, languaje } = useContext(PreferencesAppContext);
