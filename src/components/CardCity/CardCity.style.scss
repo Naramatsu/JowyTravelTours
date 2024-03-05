@@ -1,7 +1,6 @@
 @import "../../utils/utils.style.scss";
 
 .card__city {
-  @include boxShadows;
   border-radius: $external-border-radius;
   height: 400px;
   max-width: 350px;
@@ -32,7 +31,7 @@
     transition: 0.5s ease-out all;
 
     label {
-      font-size: 0.75rem;
+      font-size: 0.9rem;
       font-weight: 200;
       position: relative;
       transition: 0.5s ease-out all;
@@ -40,7 +39,7 @@
 
     h3,
     h4 {
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin: 0;
       position: relative;
       transition: 0.5s ease-out all;
@@ -48,7 +47,6 @@
 
     button {
       @include buttonOrangeGradient;
-      @include boxShadows;
       @include fontShadows;
       @include displayFlex;
       border: none;
