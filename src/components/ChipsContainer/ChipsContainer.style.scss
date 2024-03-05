@@ -67,7 +67,6 @@
 
     &.active {
       @include buttonOrangeGradient;
-      box-shadow: $box-shadows00200;
       color: #fff;
 
       svg {

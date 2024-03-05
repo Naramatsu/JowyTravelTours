@@ -4,6 +4,19 @@
   font-family: "Exo", sans-serif;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $oragen-color;
+
+    &:hover {
+      background-color: #bb3e17;
+    }
+  }
 }
 
 body {
@@ -15,12 +28,6 @@ h1 {
   font-size: 4em;
   font-weight: 600;
   margin: auto;
-  text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
-}
-
-h2,
-h3 {
-  text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
 }
 
 .app__container {
