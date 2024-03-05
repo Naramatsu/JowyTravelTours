@@ -8,8 +8,6 @@
 
   .shape {
     border-radius: 32% 68% 58% 42% / 58% 57% 43% 42%;
-    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5),
-      2px 2px 5px rgba(0, 0, 0, 0.5);
     height: 70px;
     position: relative;
     width: 70px;
@@ -27,7 +25,6 @@
       font-weight: 700;
       left: 50%;
       position: absolute;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       top: 50%;
       transform: translate(-50%, -50%);
     }
