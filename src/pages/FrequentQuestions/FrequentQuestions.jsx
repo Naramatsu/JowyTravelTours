@@ -4,7 +4,12 @@ import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import Question from "../../components/Question/Question";
 import { imgBanner } from "../../utils/constants";
-import { pageTitle, questions, subTitle, title } from "./data";
+import {
+  pageTitle,
+  questions,
+  subTitle,
+  title,
+} from "./FrequentQuestions.data";
 import { PreferencesAppContext } from "../../context/Preferences";
 import "./FrequentQuestions.style.scss";
 
