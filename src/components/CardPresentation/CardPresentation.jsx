@@ -1,7 +1,12 @@
 import React from "react";
+import notAvailable from "../../assets/NOT_AVAILABLE.png";
 import { BsFillStarFill, BsGeoAlt } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../utils/routes";
+import { viewGalleryLabel } from "./CardPresentation.data";
 import "./CardPresentation.style.scss";
+
+const componentClassNamePrefix = "card__presentation";
 
 const CardPresentation = ({
   id,
@@ -11,34 +16,41 @@ const CardPresentation = ({
   price,
   rating,
   viewDetails,
+  isAvailable = true,
+  languaje,
 }) => (
-  <section className="card__presentation">
+  <section className={componentClassNamePrefix}>
     {rating && (
-      <section className="card__presentation__rating">
+      <section className={`${componentClassNamePrefix}__rating`}>
         <BsFillStarFill />
         {rating}
       </section>
     )}
+    {!isAvailable && (
+      <img src={notAvailable} alt="not_available" className="not_available" />
+    )}
     <img src={img} alt={name} />
     <section className="brightness" />
-    <section className="card__presentation__caption">
+    <section className={`${componentClassNamePrefix}__caption`}>
       <b>{name}</b>
       <p>
         <BsGeoAlt />
         {location}
       </p>
       {price && (
-        <label className="card__presentation__caption__price">${price}</label>
+        <label className={`${componentClassNamePrefix}__caption__price`}>
+          ${price}
+        </label>
       )}
       {viewDetails && (
         <Link
           to={{
-            pathname: `/products`,
+            pathname: ROUTES.PRODUCTS,
             search: `id=${id}`,
           }}
-          className="card__presentation__caption__price"
+          className={`${componentClassNamePrefix}__caption__price`}
         >
-          Ver Galeria
+          {viewGalleryLabel[languaje]}
         </Link>
       )}
     </section>

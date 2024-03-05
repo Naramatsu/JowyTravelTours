@@ -1,7 +1,6 @@
 @import "../../utils/utils.style.scss";
 
 .card__presentation {
-  @include boxShadows;
   border-radius: $external-border-radius;
   height: 350px;
   min-width: 250px;
@@ -24,6 +23,23 @@
   &:hover > img {
     transform: scale(1.3) rotate(-10deg) !important;
     transition: ease-in-out 0.5s all;
+  }
+
+  .not_available {
+    border-radius: 0;
+    filter: opacity(0.4);
+    height: fit-content;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: rotate(52deg) translate(-38px, -35%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:hover > .not_available {
+    transform: rotate(52deg) translate(-38px, -35%) !important;
   }
 
   .card__presentation__rating {
