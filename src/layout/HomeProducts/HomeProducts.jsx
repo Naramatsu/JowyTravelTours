@@ -4,8 +4,8 @@ import Grid from "../../layout/Grid";
 import CardPresentation from "../../components/CardPresentation";
 import { CiWarning } from "react-icons/ci";
 import { btnShowMore, chips, emptyTab, subChips, title } from "./data";
-import "./HomeProducts.style.scss";
 import { items } from "./productsList.data";
+import "./HomeProducts.style.scss";
 
 const isHiddenButton = (val) => (val ? "hidden" : "");
 
@@ -14,6 +14,8 @@ const HomeProducts = ({ languaje }) => {
   const [chipActive, setChipActive] = useState("");
   const [subChipActive, setSubChipActive] = useState("");
   const [actualPage, setActualPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [actualWidth, setActualWidth] = useState(window.innerWidth);
 
   const isHiddenBtn = () => {
     if (subChipActive) {
@@ -53,24 +55,40 @@ const HomeProducts = ({ languaje }) => {
   }, [languaje]);
 
   useEffect(() => {
+    const handlerWindowSize = () => {
+      setActualWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handlerWindowSize);
+    return () => {
+      window.removeEventListener("resize", handlerWindowSize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (actualWidth >= 1900) return setItemsPerPage(10);
+    if (actualWidth <= 1300 && actualWidth >= 1000) return setItemsPerPage(6);
+    return setItemsPerPage(8);
+  }, [actualWidth]);
+
+  useEffect(() => {
     if (chipActive) {
       if (subChipActive) {
         setActualData(
           items(languaje)
             .filter((card) => card.info.type === subChipActive)
-            .slice(0, actualPage * 8)
+            .slice(0, actualPage * itemsPerPage)
         );
       } else {
         setActualData(
           items(languaje)
             .filter((card) => card.type === chipActive)
-            .slice(0, actualPage * 8)
+            .slice(0, actualPage * itemsPerPage)
         );
       }
     } else {
-      setActualData(items(languaje).slice(0, actualPage * 8));
+      setActualData(items(languaje).slice(0, actualPage * itemsPerPage));
     }
-  }, [languaje, chipActive, actualPage, subChipActive]);
+  }, [languaje, chipActive, actualPage, subChipActive, itemsPerPage]);
 
   return (
     <section className="app__home__products">
@@ -95,6 +113,7 @@ const HomeProducts = ({ languaje }) => {
               price={item.price}
               rating={item.rating}
               viewDetails
+              languaje={languaje}
             />
           ))
         ) : (

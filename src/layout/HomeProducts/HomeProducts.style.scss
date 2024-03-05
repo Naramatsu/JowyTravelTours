@@ -12,8 +12,8 @@
   }
 
   .app__home__products__container {
-    margin-top: 40px;
     gap: 30px;
+    margin-top: 40px;
 
     .empty__label {
       font-size: 1.25rem;
@@ -36,7 +36,6 @@
 
   button {
     @include buttonOrangeGradient;
-    @include boxShadows;
     @include fontShadows;
     @include displayFlex;
     border: none;
