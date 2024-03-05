@@ -13,7 +13,7 @@
 
   img {
     border-radius: 20px 0 0 20px;
-    height: 100%;
+    height: inherit;
     object-fit: cover;
     width: 100%;
 
@@ -35,7 +35,6 @@
 
     button {
       @include buttonOrangeGradient;
-      @include boxShadows;
       @include fontShadows;
       @include displayFlex;
       border: none;
