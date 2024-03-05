@@ -2,6 +2,10 @@ export const SPANISH = "spanish";
 export const ENGLISH = "english";
 export const DARK = "dark";
 export const LIGHT = "light";
+export const LEFT = "left";
+export const RIGHT = "right";
+export const ACTIVE = "active";
+export const PAUSED = "paused";
 
 export const HOSTING = {
   [SPANISH]: "Hospedaje",
@@ -93,3 +97,81 @@ export const imgBanner =
 
 export const celphone = "(+57) 317 8559 796";
 export const hours = "7am - 9pm EST";
+
+export const BOCAGRANDE = "Bocagrande";
+export const LAGUITO = "El laguito";
+export const BOQUILLA = "Boquilla";
+export const SANTAMARTA = "Santa Marta";
+
+export const locationBox = [BOCAGRANDE, LAGUITO, BOQUILLA, SANTAMARTA];
+
+export const mainDescription1 = {
+  [SPANISH]:
+    "Descanse y relájese en la habitación Peaceful que evoca sensaciones de abundancia y refresco.",
+  [ENGLISH]:
+    "Rest and relax in the Peaceful room that evokes feelings of abundance and refreshment.",
+};
+
+export const description1 = {
+  [SPANISH]:
+    "Con áreas amplias y cómodas y luz natural que entra a raudales por los grandes ventanales, las habitaciones estándar le abren las puertas de la amplitud solo para usted.",
+  [ENGLISH]:
+    "With wide and comfortable areas and daylight pouring in from the large windows, standard rooms open the doors of spaciousness just for you.",
+};
+
+export const defaultHostingProperties = {
+  [SPANISH]: [
+    "Aire acondicionado",
+    "Comedor",
+    "Wifi",
+    "Televisor",
+    "Servicio de habitacion",
+    "Minibar",
+    "Restaurante",
+    "Piscina",
+    "Vista al mar",
+  ],
+  [ENGLISH]: [
+    "Air-conditioning",
+    "Dining room",
+    "Wifi",
+    "TV",
+    "Room service",
+    "Minibar",
+    "Restaurant",
+    "Pool",
+    "Seaview",
+  ],
+};
+
+export const additionalWarning = (people, languaje) => {
+  if (languaje === SPANISH)
+    return `+${people} personas pago adicional por persona.`;
+
+  return `+${people} people additional payment per person.`;
+};
+
+export const people = (languaje) => {
+  if (languaje === SPANISH) return `Personas.`;
+  return `People.`;
+};
+
+export const bedrooms = (rooms, languaje) => {
+  if (languaje === SPANISH) return `${rooms} Habitacion/es.`;
+  return `${rooms} Bedroom/s.`;
+};
+
+export const upToPeople = (people, languaje) => {
+  if (languaje === SPANISH) return `Hasta ${people} Personas.`;
+  return `Up to ${people} People.`;
+};
+
+export const beds = (type, languaje) => {
+  if (languaje === SPANISH) {
+    let result = " Cama ";
+    if (type === "King") return (result += `King`);
+    return (result += "Sencilla");
+  }
+  if (type === "King") return ` ${type} Bed`;
+  return ` ${type} Bed`;
+};
