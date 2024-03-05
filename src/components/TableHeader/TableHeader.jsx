@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { activeTabInitialState, tableHeaders } from "./data";
+import { activeTabInitialState, tableHeaders } from "./TableHeader.data";
 import { PreferencesAppContext } from "../../context/Preferences";
 import { isActiveTab } from "../../utils";
 import "./TableHeader.style.scss";
