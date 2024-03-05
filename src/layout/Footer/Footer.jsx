@@ -10,7 +10,7 @@ import {
   ourSocialMediaItems,
   usefulLinks,
   usefulLinksItems,
-} from "./data";
+} from "./Footer.data";
 import { PreferencesAppContext } from "../../context/Preferences";
 
 const Footer = () => {
