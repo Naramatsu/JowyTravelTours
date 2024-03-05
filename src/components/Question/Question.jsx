@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ACTIVE } from "../../utils/constants";
 import { FaChevronDown } from "react-icons/fa6";
 import "./Question.style.scss";
 
@@ -6,7 +7,7 @@ const Question = ({ index, question, description }) => {
   const [isActive, setIsActive] = useState("");
 
   const toggleActive = () => {
-    setIsActive(isActive ? "" : "active");
+    setIsActive(isActive ? "" : ACTIVE);
   };
 
   return (
