@@ -9,7 +9,6 @@
 
     video {
       border-radius: $external-border-radius;
-      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
       cursor: pointer;
       filter: brightness(0.8);
       height: 500px;
@@ -34,7 +33,6 @@
 
       svg {
         background: #fff;
-        box-shadow: $box-shadows00200;
         box-shadow: none;
         color: $oragen-color;
         font-size: 3rem;
