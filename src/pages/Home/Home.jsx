@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import CardCity from "../../components/CardCity";
 import CardClientsTestimonials from "../../components/CardClientsTestimonials";
 import CardPresentation from "../../components/CardPresentation";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
-import HomePanel from "../../components/HomePanel";
 import HomeProducts from "../../layout/HomeProducts";
 import PanelImage from "../../components/PanelImage";
 import Slider from "../../components/Slider";
@@ -23,11 +22,14 @@ import {
   mainSlogan,
   popularPlaces,
   popularPlacesItems,
-} from "./data";
+} from "./Home.data";
 import "./Home.style.scss";
 
 const Home = () => {
   const { languaje, theme } = useContext(PreferencesAppContext);
+  useEffect(() => {
+    document.title = "Jowy Travel & Tours | Home";
+  }, []);
   return (
     <>
       <Container
@@ -38,11 +40,9 @@ const Home = () => {
             "url(https://images.unsplash.com/photo-1583531352515-8884af319dc1?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FydGFnZW5hJTIwY29sb21iaWF8ZW58MHx8MHx8fDA%3D)",
         }}
       >
-        <Grid columns={2}>
+        <Grid columns={2} className="home__grid">
           <section className="home__main__section left">
             {mainSlogan[languaje]}
-            <br />
-            <HomePanel languaje={languaje} />
           </section>
           <section className="home__main__section right">
             <img
@@ -63,6 +63,7 @@ const Home = () => {
             img={place.img}
             name={place.info.name}
             location={place.info.location}
+            languaje={languaje}
           />
         ))}
       </Slider>
@@ -72,7 +73,7 @@ const Home = () => {
       </Container>
       <Slider
         title={clientsTestimonials[languaje]}
-        isFullWidth
+        width="70%"
         size={clientsTestimonialsItems.length}
       >
         {clientsTestimonialsItems.map((testimonial, index) => (

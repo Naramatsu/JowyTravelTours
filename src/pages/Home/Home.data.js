@@ -4,24 +4,28 @@ export const mainSlogan = {
   [SPANISH]: (
     <>
       <h1>
-        La vida es corta, <br />
+        <span>La vida es corta</span>
+        , <br />
         el mundo es grande
       </h1>
       <p className="subtitle">
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-        archivos de texto.
+        archivos de texto. Lorem Ipsum es simplemente el texto de relleno de las
+        imprentas y archivos de texto.
       </p>
     </>
   ),
   [ENGLISH]: (
     <>
       <h1>
-        Life is short, <br />
+        <span>Life is short</span>
+        , <br />
         the world is wide
       </h1>
       <p className="subtitle">
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-        archivos de texto.
+        archivos de texto. Lorem Ipsum es simplemente el texto de relleno de las
+        imprentas y archivos de texto.
       </p>
     </>
   ),

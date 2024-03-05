@@ -20,6 +20,11 @@
 
         h1 {
           font-size: 3.5em;
+
+          span {
+            color: $oragen-color;
+            font-weight: 600;
+          }
         }
       }
 
@@ -29,7 +34,6 @@
 
         img {
           border-radius: $external-border-radius;
-          box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
           height: fit-content;
           max-height: 650px;
           min-width: 100%;
@@ -76,6 +80,10 @@
     .app__grid {
       grid-template-columns: 1fr !important;
 
+      &.home__grid {
+        padding-bottom: 50px;
+      }
+
       .home__main__section {
         &.left {
           position: relative;
@@ -87,7 +95,6 @@
             margin: auto;
             margin-bottom: 50px;
             text-align: center;
-            text-shadow: 0 0 5px rgba($color: #000000, $alpha: 1);
             width: 90%;
           }
 
