@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Container from "../../layout/Container";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import "./Slider.style.scss";
+import { ACTIVE } from "../../utils/constants";
 
 const Slider = ({
   width = "100%",
@@ -49,11 +50,11 @@ const Slider = ({
     if (rightActive()) setSliderLeft(sliderLeft - 1);
   };
 
-  const leftActive = () => (sliderLeft < 0 ? "active" : "");
+  const leftActive = () => (sliderLeft < 0 ? ACTIVE : "");
 
   const rightActive = () => {
     const panelWidth = refSlider?.current?.offsetWidth || actualWidth;
-    return (size + sliderLeft) * itemSize > panelWidth ? "active" : "";
+    return (size + sliderLeft) * itemSize > panelWidth ? ACTIVE : "";
   };
 
   return (
