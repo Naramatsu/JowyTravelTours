@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "../../layout/Grid";
 import TableHeader from "../TableHeader";
-import { btnSearch, hospedajeForm } from "./data";
+import { btnSearch, hospedajeForm } from "./HomePanel.data";
 import "./HomePanel.style.scss";
 
 const classNamePrefixComponent = "home__panel";
