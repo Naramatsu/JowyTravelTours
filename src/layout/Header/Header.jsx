@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import Container from "../../layout/Container";
-import { appLanguaje, appTheme, routeTabs } from "./data";
+import { appLanguaje, appTheme, routeTabs } from "./Header.data";
 import { BiGlobe } from "react-icons/bi";
 import { DARK, ENGLISH, LIGHT, SPANISH } from "../../utils/constants";
 import { isDarkTheme } from "../../utils";
 import { Link } from "react-router-dom";
 import { PreferencesAppContext } from "../../context/Preferences";
+import { ROUTES } from "../../utils/routes";
 import "./Header.style.scss";
 
 const classNamePrefixComponent = "header";
@@ -28,16 +29,16 @@ const Header = () => {
         width="90%"
       >
         <h2>
-          <Link to="/">
+          <Link to={ROUTES.HOME}>
             <span>Jowy </span>Travel <span>& </span>Tours
           </Link>
         </h2>
         {!isHiddenProductsTabs && (
           <nav className={`${classNamePrefixComponent}__links`}>
             <ul>
-              {routeTabs[languaje].map(({ link, label }, index) => (
+              {routeTabs.map(({ link, label }, index) => (
                 <li key={index}>
-                  <Link to={link}>{label}</Link>
+                  <Link to={link}>{label[languaje]}</Link>
                 </li>
               ))}
             </ul>
