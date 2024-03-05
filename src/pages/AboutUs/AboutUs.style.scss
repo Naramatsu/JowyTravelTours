@@ -102,8 +102,8 @@
 
     .arrow {
       height: 50px;
-      width: 50px;
       object-fit: contain;
+      width: 50px;
 
       &:nth-last-child(1) {
         display: none;
@@ -137,8 +137,8 @@
   .shape__container {
     .shape {
       height: 50px;
-      width: 50px;
       margin-top: 8px;
+      width: 50px;
     }
   }
 
@@ -178,19 +178,19 @@
 
   .how-it-works {
     .how-it-works__steps {
-      columns: 3;
-      flex-wrap: wrap;
-      flex-direction: column;
       align-items: center;
+      columns: 3;
+      flex-direction: column;
+      flex-wrap: wrap;
 
       .arrow {
         transform: rotate(90deg);
       }
 
       .whyUs__panel {
+        align-items: center;
         flex: 1;
         flex-direction: column;
-        align-items: center;
 
         .whyUs__panel__caption {
           text-align: center;

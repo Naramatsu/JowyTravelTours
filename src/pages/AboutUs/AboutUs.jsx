@@ -11,12 +11,12 @@ import {
   steps,
   whyChooseUs,
   whyPanelTitle,
-} from "./data";
+} from "./AboutUs.data";
 import PanelImage from "../../components/PanelImage";
 import Shape from "../../components/Shape";
 import Arrow from "../../assets/arrow.png";
-import "./AboutUs.style.scss";
 import { imgBanner } from "../../utils/constants";
+import "./AboutUs.style.scss";
 
 const AboutUs = () => {
   const { theme, languaje } = useContext(PreferencesAppContext);
