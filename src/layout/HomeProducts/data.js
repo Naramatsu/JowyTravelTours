@@ -83,3 +83,13 @@ export const btnShowMore = {
   [SPANISH]: "Mostrar más",
   [ENGLISH]: "Show more",
 };
+
+export const toLabel = {
+  [SPANISH]: "a",
+  [ENGLISH]: "to",
+};
+
+export const boatsSchedule = {
+  [SPANISH]: "Las lanches salen cada 30 minutos y regresan a las 2pm.",
+  [ENGLISH]: "Boats leave every 30 minutes and return from 2pm.",
+};
