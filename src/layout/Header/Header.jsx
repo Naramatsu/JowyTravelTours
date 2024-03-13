@@ -26,7 +26,7 @@ const Header = () => {
     <header className={`${classNamePrefixComponent} ${isDarkTheme(theme)}`}>
       <Container
         className={`${classNamePrefixComponent}__container`}
-        width="90%"
+        width="70%"
       >
         <h2>
           <Link to={ROUTES.HOME}>

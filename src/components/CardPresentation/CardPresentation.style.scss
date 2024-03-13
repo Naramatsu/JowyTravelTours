@@ -79,7 +79,7 @@
     border-radius: $internal-border-radius;
     bottom: 15px;
     color: $gray-header-text;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     left: 50%;
     margin: auto;
     padding: 10px;
@@ -105,7 +105,7 @@
     .card__presentation__caption__price {
       @include buttonOrangeGradient;
       -webkit-background-clip: text;
-      bottom: 5px;
+      bottom: 10px;
       font-weight: 600;
       position: absolute;
       right: 10px;
