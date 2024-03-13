@@ -38,8 +38,8 @@
         margin: 30px auto;
       }
 
-      .product__detail__container__caption__main__info,
-      .product__detail__container__caption__main__info section {
+      .container__caption__main__info,
+      .container__caption__main__info section {
         align-items: center;
         display: flex;
         font-size: 0.9rem;
@@ -47,7 +47,7 @@
         justify-content: center;
       }
 
-      .product__detail__container__caption__main__info {
+      .container__caption__main__info {
         section {
           gap: 5px;
           padding: 0.5em !important;
@@ -121,7 +121,7 @@
     grid-template-columns: 1fr !important;
   }
 
-  .product__detail__container__caption__main__info {
+  .container__caption__main__info {
     flex-wrap: wrap;
   }
 }
