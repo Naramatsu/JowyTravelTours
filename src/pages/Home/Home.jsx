@@ -55,15 +55,16 @@ const Home = () => {
       <Slider
         width="70%"
         title={popularPlaces[languaje]}
-        size={popularPlacesItems[languaje].length}
+        size={popularPlacesItems.length}
       >
-        {popularPlacesItems[languaje].map((place, index) => (
+        {popularPlacesItems.map((place, index) => (
           <CardPresentation
             key={index}
             img={place.img}
-            name={place.info.name}
+            name={place.info.name[languaje]}
             location={place.info.location}
             languaje={languaje}
+            rating={place.info.rating}
           />
         ))}
       </Slider>
@@ -85,22 +86,24 @@ const Home = () => {
           />
         ))}
       </Slider>
-      <Slider
-        title={citiesTitle[languaje]}
-        size={citiesItems.length}
-        width="70%"
-        itemSize={370}
-      >
-        {citiesItems.map(({ img, city, title }, index) => (
-          <CardCity
-            key={index}
-            img={img}
-            city={city}
-            title={title[languaje]}
-            buttonText={citiesButtonText[languaje]}
-          />
-        ))}
-      </Slider>
+      {false && (
+        <Slider
+          title={citiesTitle[languaje]}
+          size={citiesItems.length}
+          width="70%"
+          itemSize={370}
+        >
+          {citiesItems.map(({ img, city, title }, index) => (
+            <CardCity
+              key={index}
+              img={img}
+              city={city}
+              title={title[languaje]}
+              buttonText={citiesButtonText[languaje]}
+            />
+          ))}
+        </Slider>
+      )}
       <Container width="70%">
         <PanelImage
           img={contactUsPanelImg}
@@ -110,6 +113,17 @@ const Home = () => {
           theme={theme}
         />
       </Container>
+      <iframe
+        title="cartagena map"
+        className="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62788.30360321109!2d-75.50852545!3d10.40019875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625e7ae9d1351%3A0xb161392e033f26ca!2sCartagena%20de%20Indias%2C%20Provincia%20de%20Cartagena%2C%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1710424558401!5m2!1ses!2sco"
+        width="600"
+        height="700"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
     </>
   );
 };
