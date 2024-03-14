@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Container from "../../layout/Container";
 import HostingPreview from "../../components/HostingPreview/HostingPreview";
 import Grid from "../../layout/Grid";
+import { FaAngleLeft } from "react-icons/fa6";
 import { items } from "../../layout/HomeProducts/productsList.data";
 import { SHIPS, TOURS, TRANSPORTS } from "../../utils/constants";
 import { ourGallery, subTitle } from "./ProductDetails.data";
@@ -88,6 +89,10 @@ const ProductDetails = () => {
         <section className={`${componentClassNamePrefix}__banner__caption`}>
           <h1>{name}</h1>
           <h4>{subTitle[languaje]}</h4>
+          <label className="goback" onClick={() => history.goBack()}>
+            <FaAngleLeft />
+            Go back
+          </label>
         </section>
       </section>
       <Container
