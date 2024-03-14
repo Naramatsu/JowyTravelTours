@@ -7,6 +7,17 @@ export const RIGHT = "right";
 export const ACTIVE = "active";
 export const PAUSED = "paused";
 
+export const CARTAGENA = "Cartagena";
+export const BARRANQUILLA = "Barranquilla";
+export const BARU = "Barú";
+export const BOCAGRANDE = "Bocagrande";
+export const LAGUITO = "El laguito";
+export const BOQUILLA = "Boquilla";
+export const SANTAMARTA = "Santa Marta";
+
+export const celphone = "(+57) 310 350 4215";
+export const hours = "7am - 9pm EST";
+
 export const HOSTING = {
   [SPANISH]: "Hospedaje",
   [ENGLISH]: "Hosting",
@@ -84,24 +95,16 @@ export const SHIPS = {
 
 export const SPORT_BOAT = {
   [SPANISH]: "Lanchas deportivas",
-  [ENGLISH]: "Yates",
+  [ENGLISH]: "Sports boats",
 };
 
 export const YACHTS = {
-  [SPANISH]: "Sports boats",
+  [SPANISH]: "Yates",
   [ENGLISH]: "Yachts",
 };
 
 export const imgBanner =
   "https://w0.peakpx.com/wallpaper/621/721/HD-wallpaper-playa-de-bocagrande-cartagena-colombia-beach-sand-graphy-travel-nature-sunset.jpg";
-
-export const celphone = "(+57) 317 8559 796";
-export const hours = "7am - 9pm EST";
-
-export const BOCAGRANDE = "Bocagrande";
-export const LAGUITO = "El laguito";
-export const BOQUILLA = "Boquilla";
-export const SANTAMARTA = "Santa Marta";
 
 export const locationBox = [BOCAGRANDE, LAGUITO, BOQUILLA, SANTAMARTA];
 
