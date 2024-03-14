@@ -13,7 +13,7 @@
 
   img {
     border-radius: 20px 0 0 20px;
-    height: inherit;
+    height: 100%;
     object-fit: cover;
     width: 100%;
 
@@ -23,7 +23,8 @@
   }
 
   .app__panel__image__container {
-    margin: auto;
+    margin: 0 auto;
+    padding: 1em;
     position: relative;
     width: 90%;
 
