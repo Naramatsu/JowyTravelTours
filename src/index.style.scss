@@ -49,6 +49,15 @@ h1 {
   color: $gray-header-text;
 }
 
+.goback {
+  @include displayFlex;
+  @include fontShadows;
+  color: #fff;
+  cursor: pointer;
+  gap: 5px;
+  width: fit-content;
+}
+
 @media (max-width: 1525px) {
   .app__container {
     width: 80% !important;
