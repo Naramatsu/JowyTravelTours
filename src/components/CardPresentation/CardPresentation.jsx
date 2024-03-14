@@ -34,7 +34,7 @@ const CardPresentation = ({
     <section className={`${componentClassNamePrefix}__caption`}>
       <b>{name}</b>
       <p>
-        <BsGeoAlt />
+        {location ? <BsGeoAlt /> : <br />}
         {location}
       </p>
       {price && (
