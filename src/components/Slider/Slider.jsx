@@ -60,7 +60,7 @@ const Slider = ({
   return (
     <section className="app__slider">
       <Container className="app__slider__title" width="70%">
-        <h2>{title}</h2>
+        {title}
         <aside className="app__slider__title__controls">
           {showControls && (
             <>
