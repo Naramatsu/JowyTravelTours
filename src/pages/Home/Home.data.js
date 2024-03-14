@@ -1,5 +1,10 @@
 import { ENGLISH, SPANISH } from "../../utils/constants";
 
+export const pageTitle = {
+  [SPANISH]: "Inicio",
+  [ENGLISH]: "Home",
+};
+
 export const mainSlogan = {
   [SPANISH]: (
     <>

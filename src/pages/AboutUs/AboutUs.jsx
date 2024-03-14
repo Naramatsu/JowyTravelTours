@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Arrow from "../../assets/arrow.png";
 import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
@@ -21,6 +21,12 @@ import "./AboutUs.style.scss";
 
 const AboutUs = () => {
   const { theme, languaje } = useContext(PreferencesAppContext);
+
+  useEffect(() => {
+    document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section className="aboutus">
       <BannerPage title={pageTitle[languaje]} img={imgBanner} />

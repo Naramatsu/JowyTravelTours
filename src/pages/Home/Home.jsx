@@ -20,6 +20,7 @@ import {
   contactUsPanelImg,
   contactUsPanelTitle,
   mainSlogan,
+  pageTitle,
   popularPlaces,
   popularPlacesItems,
 } from "./Home.data";
@@ -27,9 +28,12 @@ import "./Home.style.scss";
 
 const Home = () => {
   const { languaje, theme } = useContext(PreferencesAppContext);
+
   useEffect(() => {
-    document.title = "Jowy Travel & Tours | Home";
+    document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <>
       <Container

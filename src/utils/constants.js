@@ -16,7 +16,7 @@ export const BOQUILLA = "Boquilla";
 export const SANTAMARTA = "Santa Marta";
 
 export const celphone = "(+57) 310 350 4215";
-export const hours = "7am - 9pm EST";
+export const hours = "7am - 9pm GMT-5";
 
 export const HOSTING = {
   [SPANISH]: "Hospedaje",
@@ -103,8 +103,7 @@ export const YACHTS = {
   [ENGLISH]: "Yachts",
 };
 
-export const imgBanner =
-  "https://w0.peakpx.com/wallpaper/621/721/HD-wallpaper-playa-de-bocagrande-cartagena-colombia-beach-sand-graphy-travel-nature-sunset.jpg";
+export const imgBanner = "https://wallpapercave.com/wp/wp3350882.jpg";
 
 export const locationBox = [BOCAGRANDE, LAGUITO, BOQUILLA, SANTAMARTA];
 

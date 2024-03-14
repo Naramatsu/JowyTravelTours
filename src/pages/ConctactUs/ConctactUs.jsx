@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import BannerPage from "../../components/BannerPage/BannerPage";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
@@ -7,6 +7,7 @@ import { PreferencesAppContext } from "../../context/Preferences";
 import {
   btnSend,
   formInputs,
+  pageTitle,
   reachOutUs,
   requiredHolder,
   title,
@@ -16,6 +17,12 @@ import "./ConctactUs.style.scss";
 
 const ConctactUs = () => {
   const { theme, languaje } = useContext(PreferencesAppContext);
+
+  useEffect(() => {
+    document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section className="contactus">
       <BannerPage title="Contact Us" img={imgBanner} />

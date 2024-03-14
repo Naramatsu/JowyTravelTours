@@ -1,5 +1,10 @@
 import { ENGLISH, SPANISH } from "../../utils/constants";
 
+export const pageTitle = {
+  [SPANISH]: "Contactanos",
+  [ENGLISH]: "Contact Us",
+};
+
 export const reachOutUs = {
   [SPANISH]: "Llega a nosotros",
   [ENGLISH]: "Reach out to us",

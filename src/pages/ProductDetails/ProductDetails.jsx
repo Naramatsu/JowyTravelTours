@@ -5,7 +5,7 @@ import Grid from "../../layout/Grid";
 import { FaAngleLeft } from "react-icons/fa6";
 import { items } from "../../layout/HomeProducts/productsList.data";
 import { SHIPS, TOURS, TRANSPORTS } from "../../utils/constants";
-import { ourGallery, subTitle } from "./ProductDetails.data";
+import { ourGallery, pageTitle, subTitle } from "./ProductDetails.data";
 import { PreferencesAppContext } from "../../context/Preferences";
 import { ROUTES } from "../../utils/routes";
 import { useHistory } from "react-router-dom";
@@ -26,7 +26,7 @@ const ProductDetails = () => {
   const { name, mainDescription, description, gallery } = product.info;
 
   useEffect(() => {
-    document.title = `Jowy Travel & Tours | Products | ${name}`;
+    document.title = `Jowy Travel & Tours | ${pageTitle[languaje]} | ${name}`;
     window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
