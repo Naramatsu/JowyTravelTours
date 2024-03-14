@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
+import Arrow from "../../assets/arrow.png";
 import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
-import { PreferencesAppContext } from "../../context/Preferences";
+import PanelImage from "../../components/PanelImage";
+import Shape from "../../components/Shape";
+import { imgBanner } from "../../utils/constants";
+
 import {
   howItWorks,
   outstandingInfo,
@@ -12,10 +16,7 @@ import {
   whyChooseUs,
   whyPanelTitle,
 } from "./AboutUs.data";
-import PanelImage from "../../components/PanelImage";
-import Shape from "../../components/Shape";
-import Arrow from "../../assets/arrow.png";
-import { imgBanner } from "../../utils/constants";
+import { PreferencesAppContext } from "../../context/Preferences";
 import "./AboutUs.style.scss";
 
 const AboutUs = () => {
