@@ -6,16 +6,16 @@ import { ROUTES } from "../../utils/routes";
 export const footerDescription = {
   [SPANISH]: (
     <p className="title__description">
-      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
-      de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-      industrias desde el año 1500
+      Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
+      inolvidables. Cartagena de indias es un lugar perfecto para conocer y
+      disfrutar de todas las maravillas que contiene esta bella ciudad.
     </p>
   ),
   [ENGLISH]: (
     <p className="title__description">
-      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
-      de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-      industrias desde el año 1500
+      Every trip is an opportunity to discover, explore and create unforgettable
+      memories. Cartagena de Indias is a perfect place to discover and enjoy all
+      the wonders that this beautiful city contains.
     </p>
   ),
 };

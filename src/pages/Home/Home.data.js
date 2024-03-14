@@ -4,132 +4,128 @@ export const mainSlogan = {
   [SPANISH]: (
     <>
       <h1>
-        <span>La vida es corta</span>
-        , <br />
-        el mundo es grande
+        Descubre
+        <span> Cartagena</span>
+        <br />
+        con <span> nosotros</span>.
       </h1>
       <p className="subtitle">
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-        archivos de texto. Lorem Ipsum es simplemente el texto de relleno de las
-        imprentas y archivos de texto.
+        Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
+        inolvidables. Cartagena de indias es un lugar perfecto para conocer y
+        disfrutar de todas las maravillas que contiene esta bella ciudad.
       </p>
     </>
   ),
   [ENGLISH]: (
     <>
       <h1>
-        <span>Life is short</span>
-        , <br />
-        the world is wide
+        Discover
+        <span> Cartagena</span>
+        <br />
+        with us
       </h1>
       <p className="subtitle">
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-        archivos de texto. Lorem Ipsum es simplemente el texto de relleno de las
-        imprentas y archivos de texto.
+        Every trip is an opportunity to discover, explore and create
+        unforgettable memories. Cartagena de Indias is a perfect place to
+        discover and enjoy all the wonders that this beautiful city contains.
       </p>
     </>
   ),
 };
 
 export const popularPlaces = {
-  [SPANISH]: "Lugares Populares",
-  [ENGLISH]: "Popular Places",
+  [SPANISH]: (
+    <h2>
+      <span>Lugares </span>Populares
+    </h2>
+  ),
+  [ENGLISH]: (
+    <h2>
+      <span>Popular </span>Places
+    </h2>
+  ),
 };
 
-export const popularPlacesItems = {
-  [SPANISH]: [
-    {
-      img: "https://www.cartagena-indias.com/Lugares/Images/castillo-san-felipe.jpg",
-      info: {
-        name: "Castillo San Felipe",
-        location: "Cartagena",
+export const popularPlacesItems = [
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710365331/Jowy%20Travels%20y%20Tour/sanfelipe_zobqr2.jpg",
+    info: {
+      name: {
+        [SPANISH]: "Castillo San Felipe",
+        [ENGLISH]: "San Felipe Castle",
       },
+      location: "Cartagena",
+      rating: 4.7,
     },
-    {
-      img: "https://www.baytours.com.co/wp-content/uploads/2019/01/playa-blanca-baru.jpg",
-      info: {
-        name: "Playa blanca",
-        location: "Barú",
+  },
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710366044/Jowy%20Travels%20y%20Tour/playatranquila_uznshm.webp",
+    info: {
+      name: {
+        [SPANISH]: "Playa blanca",
+        [ENGLISH]: "White beach",
       },
+      location: "Barú",
+      rating: 4.2,
     },
-    {
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg/640px-Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg",
-      info: {
-        name: "Palenque",
-        location: "Mahates",
+  },
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710366205/Jowy%20Travels%20y%20Tour/palenque_uy8m6i.webp",
+    info: {
+      name: {
+        [SPANISH]: "Palenque",
+        [ENGLISH]: "Palenque",
       },
+      location: "Mahates",
+      rating: 4,
     },
-    {
-      img: "https://www.eluniversal.com.co/binrepository/933x700/0c0/0d0/none/13704/HXMI/volcan-del-totumo_5867681_20220216115142.jpg",
-      info: {
-        name: "Volcán del Totumo",
-        location: "Santa Catalina",
+  },
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710366359/Jowy%20Travels%20y%20Tour/volcantotumo_eqocjc.jpg",
+    info: {
+      name: {
+        [SPANISH]: "Volcán del Totumo",
+        [ENGLISH]: "Volcano of totumo",
       },
+      location: "Santa Catalina",
+      rating: 4.3,
     },
-    {
-      img: "https://weekend-bucket.s3.amazonaws.com/Desde_Bucaramanga_Parque_Tayrona_1_52ca91e004.jpg",
-      info: {
-        name: "Parque Tayrona",
-        location: "Santa Marta",
+  },
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710366449/Jowy%20Travels%20y%20Tour/tayrona_oldgw8.jpg",
+    info: {
+      name: {
+        [SPANISH]: "Parque Tayrona",
+        [ENGLISH]: "Tayrona Park",
       },
+      location: "Santa Marta",
+      rating: 4.5,
     },
-    {
-      img: "https://expotur-eco.com/wp-content/uploads/2019/08/cropped-Salinas-de-Galerazamba-mar-rosado-en-colombia.jpg",
-      info: {
-        name: "Mar rosado",
-        location: "Barranquilla",
+  },
+  {
+    img: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1710366514/Jowy%20Travels%20y%20Tour/marrosado_anxznb.jpg",
+    info: {
+      name: {
+        [SPANISH]: "Mar rosado",
+        [ENGLISH]: "Pink sea",
       },
+      location: "Barranquilla",
+      rating: 4,
     },
-  ],
-  [ENGLISH]: [
-    {
-      img: "https://www.cartagena-indias.com/Lugares/Images/castillo-san-felipe.jpg",
-      info: {
-        name: "San Felipe Castle",
-        location: "Cartagena",
-      },
-    },
-    {
-      img: "https://www.baytours.com.co/wp-content/uploads/2019/01/playa-blanca-baru.jpg",
-      info: {
-        name: "Playa blanca",
-        location: "Barú",
-      },
-    },
-    {
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg/640px-Plaza_de_San_Roque%2C_Mahates_Bol%C3%ADvar.jpg",
-      info: {
-        name: "Palenque",
-        location: "Mahates",
-      },
-    },
-    {
-      img: "https://weekend-bucket.s3.amazonaws.com/Desde_Bucaramanga_Parque_Tayrona_1_52ca91e004.jpg",
-      info: {
-        name: "Tayrona Park",
-        location: "Santa Marta",
-      },
-    },
-    {
-      img: "https://www.eluniversal.com.co/binrepository/933x700/0c0/0d0/none/13704/HXMI/volcan-del-totumo_5867681_20220216115142.jpg",
-      info: {
-        name: "Volcán del Totumo",
-        location: "Santa Catalina",
-      },
-    },
-    {
-      img: "https://expotur-eco.com/wp-content/uploads/2019/08/cropped-Salinas-de-Galerazamba-mar-rosado-en-colombia.jpg",
-      info: {
-        name: "Mar rosado",
-        location: "Barranquilla",
-      },
-    },
-  ],
-};
+  },
+];
 
 export const clientsTestimonials = {
-  [SPANISH]: "Testimonios de clientes",
-  [ENGLISH]: "Clients Testimonials",
+  [SPANISH]: (
+    <h2>
+      <span>Testimonios </span>de clientes
+    </h2>
+  ),
+  [ENGLISH]: (
+    <h2>
+      <span>Clients </span>Testimonials
+    </h2>
+  ),
 };
 
 export const clientsTestimonialsItems = Array(8).fill({
@@ -179,14 +175,14 @@ export const contactUsPanelImg =
 export const contactUsPanelTitle = {
   [SPANISH]: (
     <h2>
-      Recerva un <br />
-      ticket y dejate llevar
+      Recerva tu hospedaje, <br />
+      tour o transporte y dejate llevar
     </h2>
   ),
   [ENGLISH]: (
     <h2>
-      Book a <br />
-      ticket & just leave
+      Book a hosting, <br />
+      tour o transport & just leave
     </h2>
   ),
 };

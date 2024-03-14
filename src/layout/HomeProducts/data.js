@@ -23,14 +23,14 @@ import {
 export const title = {
   [SPANISH]: (
     <h2>
-      Ve a cualquier lugar <br />
-      con nuestras últimas ofertas de e-Tour
+      Hospedate, ve a cualquier lugar <br />o disfruta con nuestras últimas
+      ofertas de e-Tour
     </h2>
   ),
   [ENGLISH]: (
     <h2>
-      Go anywhere <br />
-      with our latest e-Tour offers
+      Stay, go anywhere <br />
+      or enjoy our latest e-Tour offers
     </h2>
   ),
 };

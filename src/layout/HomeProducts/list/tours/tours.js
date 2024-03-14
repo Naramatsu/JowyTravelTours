@@ -2,6 +2,7 @@ import { FaRegClock } from "react-icons/fa";
 import { IoBoatOutline } from "react-icons/io5";
 
 import {
+  CARTAGENA,
   DAYPASS,
   ENGLISH,
   SPANISH,
@@ -216,7 +217,7 @@ export const toursItems = (languaje) => [
     isAvailable: true,
     info: {
       name: "Citytour",
-      location: "Cartagena",
+      location: CARTAGENA,
       type: TOURS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
@@ -251,7 +252,7 @@ export const toursItems = (languaje) => [
     isAvailable: true,
     info: {
       name: "Rumba en chiva",
-      location: "Cartagena",
+      location: CARTAGENA,
       type: TOURS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
@@ -286,7 +287,7 @@ export const toursItems = (languaje) => [
     isAvailable: true,
     info: {
       name: "Volcan del Totumo",
-      location: "Cartagena",
+      location: CARTAGENA,
       type: TOURS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
@@ -320,8 +321,8 @@ export const toursItems = (languaje) => [
     type: TOURS[languaje],
     isAvailable: true,
     info: {
-      name: "Cartagena a Barranquilla",
-      location: "Cartagena - Barranquilla",
+      name: `${CARTAGENA} a Barranquilla`,
+      location: `${CARTAGENA} - Barranquilla`,
       type: TOURS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
@@ -355,8 +356,8 @@ export const toursItems = (languaje) => [
     type: TOURS[languaje],
     isAvailable: true,
     info: {
-      name: "Cartagena a Santa Marta",
-      location: "Cartagena - Santa Marta",
+      name: `${CARTAGENA} a Santa Marta`,
+      location: `${CARTAGENA} - Santa Marta`,
       type: TOURS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },

@@ -3,6 +3,7 @@ import { FaRegUser } from "react-icons/fa";
 import {
   AUTOMOBILES,
   BUSES,
+  CHIVAS,
   SHIPS,
   SPORT_BOAT,
   TRANSPORTS,
@@ -30,7 +31,6 @@ export const transportsAndShipsItems = (languaje) => [
     info: {
       name: AUTOMOBILES[languaje],
       type: AUTOMOBILES[languaje],
-      location: "",
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
@@ -65,7 +65,6 @@ export const transportsAndShipsItems = (languaje) => [
     info: {
       name: VANS[languaje],
       type: VANS[languaje],
-      location: "",
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
@@ -100,7 +99,6 @@ export const transportsAndShipsItems = (languaje) => [
     info: {
       name: BUSES[languaje],
       type: BUSES[languaje],
-      location: "",
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
@@ -133,9 +131,8 @@ export const transportsAndShipsItems = (languaje) => [
     type: TRANSPORTS[languaje],
     isAvailable: true,
     info: {
-      name: BUSES[languaje],
-      type: BUSES[languaje],
-      location: "",
+      name: CHIVAS[languaje],
+      type: CHIVAS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
@@ -170,7 +167,6 @@ export const transportsAndShipsItems = (languaje) => [
     info: {
       name: SPORT_BOAT[languaje],
       type: SPORT_BOAT[languaje],
-      location: "",
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
@@ -205,7 +201,6 @@ export const transportsAndShipsItems = (languaje) => [
     info: {
       name: YACHTS[languaje],
       type: YACHTS[languaje],
-      location: "",
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
       properties: { ...defaultHostingProperties },
