@@ -1,5 +1,5 @@
 @mixin imgBrightness {
-  filter: brightness(0.5);
+  filter: brightness(0.4);
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -71,13 +71,17 @@
   box-shadow: 6px 2px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.title__color {
+@mixin titleColor {
   background: -webkit-linear-gradient(
     rgba(255, 139, 77, 1),
     rgba(255, 80, 33, 1)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.title__color {
+  @include titleColor;
 }
 
 $oragen-color: #ff5c2a;

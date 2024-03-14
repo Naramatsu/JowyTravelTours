@@ -16,7 +16,7 @@
       font-weight: 600;
 
       span {
-        color: $oragen-color;
+        @include titleColor;
         font-weight: 600;
       }
     }

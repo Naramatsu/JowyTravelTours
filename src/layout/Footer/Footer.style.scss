@@ -24,7 +24,7 @@
           }
 
           span {
-            color: $oragen-color;
+            @include titleColor;
             font-stretch: condensed;
             font-weight: 800;
           }
@@ -47,8 +47,15 @@
             padding-left: 0;
 
             li {
+              margin-bottom: 5px;
+
               a {
                 @include linkNoVisited($gray-lighter-color);
+
+                &:hover {
+                  border-bottom: solid #fff;
+                  color: #fff;
+                }
               }
             }
           }
