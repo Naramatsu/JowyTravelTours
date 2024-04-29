@@ -66,6 +66,12 @@ h3 {
 
       &.dark {
         background-color: $card-testimonial-dark-bg;
+
+        input,
+        textarea {
+          background-color: $dark-color;
+          color: #fff;
+        }
       }
 
       .form__input {

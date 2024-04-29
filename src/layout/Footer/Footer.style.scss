@@ -14,14 +14,12 @@
       position: relative;
 
       section {
-        h3 {
+        .title {
+          font-size: 2rem;
           color: #fff;
           font-stretch: condensed;
           font-weight: 600;
-
-          &.title {
-            font-weight: 800;
-          }
+          text-decoration: none;
 
           span {
             @include titleColor;
@@ -78,7 +76,6 @@
 
               svg {
                 background-color: $dark-color;
-                border-radius: 50%;
                 color: #fff;
                 font-size: 40px;
                 transform: rotate(0deg);
