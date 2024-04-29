@@ -20,12 +20,13 @@ const ConctactUs = () => {
 
   useEffect(() => {
     document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <section className="contactus">
-      <BannerPage title="Contact Us" img={imgBanner} />
+      <BannerPage title={pageTitle[languaje]} img={imgBanner} />
       <Container width="70%" className="contactus__container">
         <section className="contactus__container__title">
           <h3>{reachOutUs[languaje]}</h3>

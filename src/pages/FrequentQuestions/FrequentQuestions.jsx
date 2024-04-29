@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import Question from "../../components/Question/Question";
-import { imgBanner } from "../../utils/constants";
+import { ACTIVE, imgBanner } from "../../utils/constants";
 import {
   pageTitle,
   questions,
@@ -14,12 +14,20 @@ import { PreferencesAppContext } from "../../context/Preferences";
 import "./FrequentQuestions.style.scss";
 
 const FrequentQuestions = () => {
+  const [activeQuestion, setActiveQuestion] = useState(null);
   const { theme, languaje } = useContext(PreferencesAppContext);
 
   useEffect(() => {
     document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const isActive = (index) => (activeQuestion === index ? ACTIVE : "");
+
+  const handlerActive = (index) => {
+    setActiveQuestion(activeQuestion === index ? null : index);
+  };
 
   return (
     <section className="frequentquestions">
@@ -38,6 +46,8 @@ const FrequentQuestions = () => {
                 index={index + 1}
                 question={question}
                 description={response}
+                isActive={isActive(index)}
+                onClick={handlerActive}
               />
             ))}
           </section>

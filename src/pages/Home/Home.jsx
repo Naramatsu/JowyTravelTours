@@ -31,6 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     document.title = `Jowy Travel & Tours | ${pageTitle[languaje]}`;
+    window.scrollTo(0, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

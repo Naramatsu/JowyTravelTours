@@ -20,9 +20,9 @@ const Footer = () => {
       <Container width="70%" className="footer__container">
         <Grid className="footer__info" columns={3}>
           <section>
-            <h3 className="title">
+            <Link to="/" className="title">
               <span>Jowy </span>Travel <span>& </span>Tours
-            </h3>
+            </Link>
             {footerDescription[languaje]}
           </section>
           <section className="usefull_links">
