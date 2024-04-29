@@ -23,8 +23,8 @@ import {
 export const title = {
   [SPANISH]: (
     <h2>
-      Hospedate, ve a cualquier lugar <br />o disfruta con nuestras últimas
-      ofertas de e-Tour
+      Hospédate, ve a cualquier lugar o disfruta con nuestras últimas ofertas de
+      e-Tour.
     </h2>
   ),
   [ENGLISH]: (

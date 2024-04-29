@@ -16,7 +16,7 @@ export const mainSlogan = {
       </h1>
       <p className="subtitle">
         Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
-        inolvidables. Cartagena de indias es un lugar perfecto para conocer y
+        inolvidables. Cartagena de Indias es un lugar perfecto para conocer y
         disfrutar de todas las maravillas que contiene esta bella ciudad.
       </p>
     </>
@@ -180,8 +180,8 @@ export const contactUsPanelImg =
 export const contactUsPanelTitle = {
   [SPANISH]: (
     <h2>
-      Recerva tu hospedaje, <br />
-      tour o transporte y dejate llevar
+      Reserva tu hospedaje, <br />
+      tour o transporte y déjate llevar.
     </h2>
   ),
   [ENGLISH]: (
@@ -212,6 +212,6 @@ export const contactUsPanelDescription = {
 };
 
 export const contactUsPanelButtonText = {
-  [SPANISH]: "Preguntame",
+  [SPANISH]: "Pregúntame",
   [ENGLISH]: "Ask me",
 };

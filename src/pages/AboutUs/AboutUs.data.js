@@ -51,22 +51,22 @@ export const panelDescription = {
 
 export const outstandingInfo = {
   [SPANISH]: [
-    { cuantity: "10", label: "Años Exp" },
+    { cuantity: "10", label: "Años de experiencia" },
     { cuantity: "10+", label: "Hoteles" },
     { cuantity: "3", label: "Ciudades disponibles" },
   ],
   [ENGLISH]: [
-    { cuantity: "10", label: "Years Exp" },
+    { cuantity: "10", label: "Years of experience" },
     { cuantity: "10+", label: "Hotels" },
     { cuantity: "3", label: "Cities availables" },
   ],
 };
 
 export const whyPanelTitle = {
-  [SPANISH]: <h2>¿Por qué Elegirnos?</h2>,
+  [SPANISH]: <h2>¿Por qué elegirnos?</h2>,
   [ENGLISH]: (
     <h2>
-      Why <br /> choose US?
+      Why <br /> choose uS?
     </h2>
   ),
 };
@@ -163,7 +163,7 @@ export const steps = {
     {
       index: 1,
       label: "Me Contactas",
-      description: <p>Te damos asesoria</p>,
+      description: <p>Te damos asesoría</p>,
     },
     {
       index: 2,

@@ -1,7 +1,7 @@
 import { ENGLISH, SPANISH } from "../../utils/constants";
 
 export const pageTitle = {
-  [SPANISH]: "Contactanos",
+  [SPANISH]: "Contáctanos",
   [ENGLISH]: "Contact Us",
 };
 
@@ -14,7 +14,7 @@ export const workingHours = {
   [SPANISH]: {
     plan: "Planea tu visita",
     hours: "Horario:",
-    days: "Luneas a Domingo",
+    days: "Lunes a Domingo",
   },
   [ENGLISH]: {
     plan: "Plan your visit",
@@ -26,8 +26,8 @@ export const workingHours = {
 export const title = {
   [SPANISH]: (
     <h3>
-      Dejanos un poco de
-      <br /> informacion y estaremos en contacto.
+      Déjanos un poco de
+      <br /> información y estaremos en contacto.
     </h3>
   ),
   [ENGLISH]: (
@@ -66,10 +66,10 @@ export const formInputs = {
         required: true,
       },
       {
-        label: "Numero celular",
+        label: "Número de telefono",
         name: "phone",
         type: "tel",
-        placeholder: "Tu numbero de telefono",
+        placeholder: "Tu número de telefono",
         required: true,
       },
     ],

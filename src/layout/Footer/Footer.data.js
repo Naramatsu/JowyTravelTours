@@ -7,7 +7,7 @@ export const footerDescription = {
   [SPANISH]: (
     <p className="title__description">
       Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
-      inolvidables. Cartagena de indias es un lugar perfecto para conocer y
+      inolvidables. Cartagena de Indias es un lugar perfecto para conocer y
       disfrutar de todas las maravillas que contiene esta bella ciudad.
     </p>
   ),
@@ -21,7 +21,7 @@ export const footerDescription = {
 };
 
 export const usefulLinks = {
-  [SPANISH]: "Links utiles",
+  [SPANISH]: "Links útiles",
   [ENGLISH]: "Useful links",
 };
 
@@ -33,7 +33,7 @@ export const usefulLinksItems = {
     },
     {
       link: ROUTES.CONTACTUS,
-      label: "Contactenos",
+      label: "Contáctenos",
     },
     {
       link: ROUTES.ABOUTUS,
