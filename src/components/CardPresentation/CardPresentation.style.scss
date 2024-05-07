@@ -75,31 +75,31 @@
   }
 
   .card__presentation__caption {
-    background: #fff;
-    border-radius: $internal-border-radius;
-    bottom: 15px;
-    color: $gray-header-text;
-    font-size: 0.8rem;
-    left: 50%;
-    margin: auto;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(180deg, transparent 0%, #000 100%);
+    bottom: 0;
+    color: #fff;
     padding: 10px;
     position: absolute;
-    transform: translateX(-50%);
-    width: 80%;
+    text-decoration: none;
+    text-shadow: 2px 2px rgba($color: #000000, $alpha: 1);
+    width: -webkit-fill-available;
+
+    p {
+      font-size: 0.8rem;
+      margin: 5px 0;
+    }
 
     b {
-      color: #000;
-      font-size: 0.95rem;
       font-weight: 600;
     }
 
-    p {
-      margin: 5px 0;
-      margin-bottom: 15px;
-
-      svg {
-        margin-right: 5px;
-      }
+    .location {
+      @include displayFlex;
+      align-items: center;
+      gap: 5px;
+      justify-content: flex-start;
+      margin-bottom: 20px;
     }
 
     .card__presentation__caption__price {
@@ -110,6 +110,7 @@
       position: absolute;
       right: 10px;
       -webkit-text-fill-color: transparent;
+      text-shadow: none;
     }
   }
 }

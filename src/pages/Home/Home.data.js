@@ -195,18 +195,22 @@ export const contactUsPanelTitle = {
 export const contactUsPanelDescription = {
   [SPANISH]: (
     <p>
-      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
-      de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-      industrias desde el año 1500, cuando un impresor (N. del T. persona que se
-      dedica a la imprenta)
+      Hospédate con nosotros y vive la experiencia completa, disfruta de Tours
+      personalizados para explorar cada rincón de la ciudad y transportate
+      seguro y cómodo por toda la ciudad sin preocupaciones.
+      <br />
+      <br />
+      ¡Reserva ahora y disfruta de descuentos exclusivos!
     </p>
   ),
   [ENGLISH]: (
     <p>
-      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
-      de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-      industrias desde el año 1500, cuando un impresor (N. del T. persona que se
-      dedica a la imprenta)
+      Stay with us and live the complete experience, enjoy personalized Tours to
+      explore every corner of the city and transport yourself safely and
+      comfortably throughout the city without worries.
+      <br />
+      <br />
+      Book now and enjoy exclusive discounts!
     </p>
   ),
 };

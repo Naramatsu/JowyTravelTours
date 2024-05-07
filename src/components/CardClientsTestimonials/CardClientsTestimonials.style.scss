@@ -30,15 +30,16 @@
 
   .card__clients__testimonials__info {
     @include displayFlex;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
     margin: auto;
     position: relative;
     width: 90%;
 
     img {
       border-radius: 50%;
-      height: 70px;
-      width: 70px;
+      height: 50px;
+      width: 50px;
     }
 
     h3 {
@@ -55,6 +56,7 @@
 
     p {
       font-size: 0.9rem;
+      margin-top: 0;
     }
   }
 
