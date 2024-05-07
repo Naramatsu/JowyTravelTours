@@ -177,3 +177,34 @@ export const beds = (type, languaje) => {
   if (type === "King") return ` ${type} Bed`;
   return ` ${type} Bed`;
 };
+
+export const appSubtitle = {
+  [SPANISH]: (
+    <>
+      Cada viaje representa una ventana de oportunidad para descubrir nuevos
+      horizontes, explorar rincones desconocidos y forjar recuerdos imborrables.
+      <br />
+      Cartagena de Indias se erige como un destino ideal para sumergirse en la
+      magia de sus calles empedradas, sus murallas centenarias y sus
+      encantadoras plazas.
+      <br />
+      <br />
+      Es un lugar donde cada esquina guarda una historia por contar y cada
+      experiencia se convierte en un tesoro inolvidable.
+    </>
+  ),
+  [ENGLISH]: (
+    <>
+      Each trip represents a window of opportunity to discover new horizons,
+      explore unknown corners and forge indelible memories.
+      <br />
+      Cartagena de Indias stands as an ideal destination to immerse yourself in
+      the magic of its cobbled streets, its centuries-old walls and its charming
+      squares.
+      <br />
+      <br />
+      It is a place where every corner keeps a story to tell and each experience
+      becomes an unforgettable treasure.
+    </>
+  ),
+};

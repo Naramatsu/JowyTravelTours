@@ -1,4 +1,4 @@
-import { ENGLISH, SPANISH } from "../../utils/constants";
+import { ENGLISH, SPANISH, appSubtitle } from "../../utils/constants";
 
 export const pageTitle = {
   [SPANISH]: "Inicio",
@@ -14,11 +14,7 @@ export const mainSlogan = {
         <br />
         con <span> nosotros</span>.
       </h1>
-      <p className="subtitle">
-        Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
-        inolvidables. Cartagena de Indias es un lugar perfecto para conocer y
-        disfrutar de todas las maravillas que contiene esta bella ciudad.
-      </p>
+      <p className="subtitle">{appSubtitle[SPANISH]}</p>
     </>
   ),
   [ENGLISH]: (
@@ -27,13 +23,9 @@ export const mainSlogan = {
         Discover
         <span> Cartagena</span>
         <br />
-        with us
+        with <span> Us</span>.
       </h1>
-      <p className="subtitle">
-        Every trip is an opportunity to discover, explore and create
-        unforgettable memories. Cartagena de Indias is a perfect place to
-        discover and enjoy all the wonders that this beautiful city contains.
-      </p>
+      <p className="subtitle">{appSubtitle[ENGLISH]}</p>
     </>
   ),
 };

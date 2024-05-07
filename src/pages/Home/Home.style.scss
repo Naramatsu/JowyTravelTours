@@ -12,6 +12,8 @@
         color: $gray-lighter-color;
         font-size: 1.25rem;
         font-weight: 300;
+        text-align: justify;
+        padding-right: 40px;
       }
 
       &.left {
@@ -102,6 +104,10 @@
             margin-bottom: 50px;
             text-align: center;
             width: 90%;
+          }
+
+          p {
+            padding: 0;
           }
 
           .home__panel {

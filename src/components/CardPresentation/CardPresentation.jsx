@@ -76,29 +76,6 @@ const CardPresentation = ({
       <img src={img} alt={name} />
       <section className="brightness" />
       {viewDetailsBuilder()}
-      {/* <section className={`${componentClassNamePrefix}__caption`}>
-        <b>{name}</b>
-        <p>
-          {location ? <BsGeoAlt /> : <br />}
-          {location}
-        </p>
-        {price && (
-          <label className={`${componentClassNamePrefix}__caption__price`}>
-            ${price}
-          </label>
-        )}
-        {viewDetails && (
-          <Link
-            to={{
-              pathname: ROUTES.PRODUCTS,
-              search: `id=${id}`,
-            }}
-            className={`${componentClassNamePrefix}__caption__price`}
-          >
-            {viewGalleryLabel[languaje]}
-          </Link>
-        )}
-      </section> */}
     </section>
   );
 };
