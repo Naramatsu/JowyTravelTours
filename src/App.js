@@ -5,7 +5,7 @@ import Footer from "./layout/Footer";
 import FrequentQuestions from "./pages/FrequentQuestions";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
-import ProductDetails from "./pages/ProductDetails";
+import Products from "./pages/Products";
 import { isDarkTheme } from "./utils";
 import { PreferencesAppContext } from "./context/Preferences";
 import { Switch, Route } from "react-router-dom";
@@ -30,7 +30,7 @@ const App = () => {
           <FrequentQuestions />
         </Route>
         <Route exact path={ROUTES.PRODUCTS}>
-          <ProductDetails />
+          <Products />
         </Route>
       </Switch>
       <Footer />
