@@ -41,22 +41,25 @@ export const hotelsItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://hotel-ibatama-cartagena.hotelmix.es/data/Photos/OriginalPhoto/10370/1037077/1037077378/Hotel-Ibatama-Cartagena-Exterior.JPEG",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187486/Jowy%20Travels%20y%20Tour/Ibatama/3_xaahhv.jpg",
           span: { gridRow: "span 2" },
         },
         {
-          url: "https://hotel-ibatama-cartagena.hotelmix.es/data/Photos/OriginalPhoto/10370/1037077/1037077378/Hotel-Ibatama-Cartagena-Exterior.JPEG",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187485/Jowy%20Travels%20y%20Tour/Ibatama/1_enwvuk.jpg",
         },
         {
-          url: "https://hotel-ibatama-cartagena.hotelmix.es/data/Photos/OriginalPhoto/10370/1037077/1037077378/Hotel-Ibatama-Cartagena-Exterior.JPEG",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187504/Jowy%20Travels%20y%20Tour/Ibatama/12_kyryi9.jpg",
           span: { gridColumn: "span 2" },
         },
         {
-          url: "https://hotel-ibatama-cartagena.hotelmix.es/data/Photos/OriginalPhoto/10370/1037077/1037077378/Hotel-Ibatama-Cartagena-Exterior.JPEG",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187502/Jowy%20Travels%20y%20Tour/Ibatama/10_whw0dr.jpg",
         },
         {
-          url: "https://hotel-ibatama-cartagena.hotelmix.es/data/Photos/OriginalPhoto/10370/1037077/1037077378/Hotel-Ibatama-Cartagena-Exterior.JPEG",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187493/Jowy%20Travels%20y%20Tour/Ibatama/4_kghsgk.jpg",
+        },
+
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715187493/Jowy%20Travels%20y%20Tour/Ibatama/5_uerbl5.jpg",
         },
       ],
     },

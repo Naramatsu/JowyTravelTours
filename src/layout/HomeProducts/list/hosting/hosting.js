@@ -74,22 +74,28 @@ export const hostingItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/09/EdifPortofino-4.jpg",
-          span: { gridRow: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208803/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230824-WA0097_wv7mkk.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/09/EdifPortofino-4.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208803/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0069_knb068.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/09/EdifPortofino-4.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208803/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0068_i7x0dw.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/09/EdifPortofino-4.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208800/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0076_ke762w.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/09/EdifPortofino-4.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208800/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0066_mdozrw.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208800/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0065_vtqcbo.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715192771/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0014_u1wwsg.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715192770/Jowy%20Travels%20y%20Tour/Portofino/IMG-20230823-WA0007_c8o8v0.jpg",
         },
       ],
     },
@@ -138,22 +144,26 @@ export const hostingItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://assets.easybroker.com/property_images/414530/20001920/EB-AO4530.jpg?version=1574125448",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208898/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0030_nuycqe.jpg",
           span: { gridRow: "span 2" },
         },
         {
-          url: "https://assets.easybroker.com/property_images/414530/20001920/EB-AO4530.jpg?version=1574125448",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208903/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0036_ivsng9.jpg",
         },
         {
-          url: "https://assets.easybroker.com/property_images/414530/20001920/EB-AO4530.jpg?version=1574125448",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208904/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0041_zfyank.jpg",
         },
         {
-          url: "https://assets.easybroker.com/property_images/414530/20001920/EB-AO4530.jpg?version=1574125448",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208902/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0040_fezl8l.jpg",
         },
         {
-          url: "https://assets.easybroker.com/property_images/414530/20001920/EB-AO4530.jpg?version=1574125448",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208901/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0034_o7fb3o.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208900/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0033_ogk4ab.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208899/Jowy%20Travels%20y%20Tour/Palmeto%201/IMG-20230819-WA0032_qtclp3.jpg",
         },
       ],
     },
@@ -330,22 +340,41 @@ export const hostingItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://eswindows.com/wp-content/uploads/2020/09/PalmettoSunset-04.jpg",
-          span: { gridRow: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208884/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0072_ixa7y0.jpg",
         },
         {
-          url: "https://eswindows.com/wp-content/uploads/2020/09/PalmettoSunset-04.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208881/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0070_i5ya58.jpg",
         },
         {
-          url: "https://eswindows.com/wp-content/uploads/2020/09/PalmettoSunset-04.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208880/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0069_suj4h4.jpg",
         },
         {
-          url: "https://eswindows.com/wp-content/uploads/2020/09/PalmettoSunset-04.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208878/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0066_mcyqxa.jpg",
         },
         {
-          url: "https://eswindows.com/wp-content/uploads/2020/09/PalmettoSunset-04.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208877/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0067_ng5s81.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208868/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0060_khlxhu.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208867/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0059_oz3oqq.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208865/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0058_vpl47h.jpg",
+        },
+
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208865/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0055_m3gnpz.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208864/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0065_a6zbkj.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208861/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0057_rqnkg2.jpg",
+        },
+        {
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1715208850/Jowy%20Travels%20y%20Tour/Palmetto%20Sunset/IMG-20230922-WA0054_o7ds3g.jpg",
         },
       ],
     },
@@ -602,22 +631,13 @@ export const hostingItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s3e233c3063ff9116/image/i496bbd9547ef1db9/version/1493236838/image.jpg",
-          span: { gridRow: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/video/upload/v1715209353/Jowy%20Travels%20y%20Tour/Edificio%20Atlantis/VID-20220908-WA0064_hvkydw.mp4",
+          type: "video",
         },
         {
-          url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s3e233c3063ff9116/image/i496bbd9547ef1db9/version/1493236838/image.jpg",
-        },
-        {
-          url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s3e233c3063ff9116/image/i496bbd9547ef1db9/version/1493236838/image.jpg",
-          span: { gridColumn: "span 2" },
-        },
-        {
-          url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s3e233c3063ff9116/image/i496bbd9547ef1db9/version/1493236838/image.jpg",
-          span: { gridColumn: "span 2" },
-        },
-        {
-          url: "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/s3e233c3063ff9116/image/i496bbd9547ef1db9/version/1493236838/image.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/video/upload/v1715209343/Jowy%20Travels%20y%20Tour/Edificio%20Atlantis/VID-20231202-WA0024_q7gp3x.mp4",
+          span: { gridColumn: "span 3" },
+          type: "video",
         },
       ],
     },
