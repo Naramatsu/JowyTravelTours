@@ -27,6 +27,7 @@ const CardPresentation = ({
             pathname: ROUTES.PRODUCTS,
             search: `id=${id}`,
           }}
+          target="__blank"
           className={`${componentClassNamePrefix}__caption`}
         >
           <b>{name}</b>
