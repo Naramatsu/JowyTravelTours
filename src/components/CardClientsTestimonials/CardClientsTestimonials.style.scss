@@ -3,7 +3,6 @@
 .card__clients__testimonials {
   @include displayFlex;
   background-color: $card-testimonial-light-bg;
-  border: solid 1px #ddd;
   border-radius: $external-border-radius;
   flex-direction: column;
   height: 350px;
