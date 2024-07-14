@@ -30,7 +30,10 @@ const AboutUs = () => {
 
   return (
     <section className="aboutus">
-      <BannerPage title={pageTitle[languaje]} img={imgBanner} />
+      <BannerPage
+        title={pageTitle[languaje]}
+        img="https://cloudfront-us-east-1.images.arcpublishing.com/semana/E4PC43N2KRFZTKCEBUSVY3XETU.jpg"
+      />
       <Container width="70%" className="aboutus__panel">
         <PanelImage
           img={imgBanner}
@@ -66,7 +69,7 @@ const AboutUs = () => {
           </section>
         </section>
         <PanelImage
-          img={imgBanner}
+          img="https://images.unsplash.com/photo-1534943441045-1009d7cb0bb9?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FydGFnZW5hfGVufDB8fDB8fHww"
           theme={theme}
           title={whyPanelTitle[languaje]}
           className="whyUs__panel__container"

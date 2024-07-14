@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import BannerPage from "../../components/BannerPage/BannerPage";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
-import { celphone, hours, imgBanner } from "../../utils/constants";
+import { celphone, hours } from "../../utils/constants";
 import { PreferencesAppContext } from "../../context/Preferences";
 import {
   btnSend,
@@ -26,7 +26,10 @@ const ConctactUs = () => {
 
   return (
     <section className="contactus">
-      <BannerPage title={pageTitle[languaje]} img={imgBanner} />
+      <BannerPage
+        title={pageTitle[languaje]}
+        img="https://wallpapercave.com/wp/wp7676892.jpg"
+      />
       <Container width="70%" className="contactus__container">
         <section className="contactus__container__title">
           <h3>{reachOutUs[languaje]}</h3>

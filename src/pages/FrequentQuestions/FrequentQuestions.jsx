@@ -3,7 +3,7 @@ import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
 import Grid from "../../layout/Grid";
 import Question from "../../components/Question/Question";
-import { ACTIVE, imgBanner } from "../../utils/constants";
+import { ACTIVE } from "../../utils/constants";
 import {
   pageTitle,
   questions,
@@ -31,14 +31,20 @@ const FrequentQuestions = () => {
 
   return (
     <section className="frequentquestions">
-      <BannerPage title={pageTitle[languaje]} img={imgBanner} />
+      <BannerPage
+        title={pageTitle[languaje]}
+        img="https://aeropuerto.cartagena-hotels.net/data/Photos/OriginalPhoto/15008/1500840/1500840184.JPEG"
+      />
       <Container width="70%" className="frequentquestions__container">
         <section className="title">
           <h3>{title[languaje]}</h3>
           <p>{subTitle[languaje]}</p>
         </section>
         <Grid columns={2} className="frequentquestions__panel">
-          <img src={imgBanner} alt="main" />
+          <img
+            src="https://www.olamtravelers.co/wp-content/uploads/2018/03/315701673_509987071172081_128451.jpg"
+            alt="main"
+          />
           <section className={`frequentquestions__list ${theme}`}>
             {questions[languaje].map(({ question, response }, index) => (
               <Question
