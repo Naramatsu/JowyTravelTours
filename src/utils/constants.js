@@ -18,6 +18,8 @@ export const SANTAMARTA = "Santa Marta";
 export const celphone = "(+57) 310 350 4215";
 export const hours = "7am - 9pm GMT-5";
 
+export const whatsAppLink = "https://wa.me/573103504215";
+
 export const HOSTING = {
   [SPANISH]: "Hospedaje",
   [ENGLISH]: "Hosting",
@@ -101,6 +103,11 @@ export const SPORT_BOAT = {
 export const YACHTS = {
   [SPANISH]: "Yates",
   [ENGLISH]: "Yachts",
+};
+
+export const videoNotAllowedByBrowser = {
+  [SPANISH]: "Tu navegador no admite el elemento video.",
+  [ENGLISH]: "Your browser does not support the video element.",
 };
 
 export const imgBanner = "https://wallpapercave.com/wp/wp3350882.jpg";
