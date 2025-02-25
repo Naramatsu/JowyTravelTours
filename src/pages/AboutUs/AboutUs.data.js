@@ -143,7 +143,7 @@ export const steps = [
     },
     description: {
       [SPANISH]: "Buscamos de acuerdo a tus necesidades",
-      [ENGLISH]: ">We search according to your needs",
+      [ENGLISH]: "We search according to your needs",
     },
   },
   {
