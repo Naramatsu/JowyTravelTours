@@ -21,15 +21,21 @@ const HomeProducts = ({ languaje }) => {
     if (subChipActive) {
       return isHiddenButton(
         actualData.length ===
-          items(languaje).filter((card) => card.info.type === subChipActive)
-            .length
-      );
-    } else {
-      return isHiddenButton(
-        actualData.length ===
-          items(languaje).filter((card) => card.type === chipActive).length
+          items(languaje).filter(
+            (card) => card.info.type === subChipActive && card.isAvailable
+          ).length
       );
     }
+    if (chipActive) {
+      return isHiddenButton(
+        actualData.length ===
+          items(languaje).filter(
+            (card) => card.type === chipActive && card.isAvailable
+          ).length
+      );
+    }
+
+    return isHiddenButton(actualData.length === items(languaje).length);
   };
 
   const handlerActiveChips = (item) => {
@@ -75,13 +81,15 @@ const HomeProducts = ({ languaje }) => {
       if (subChipActive) {
         setActualData(
           items(languaje)
-            .filter((card) => card.info.type === subChipActive)
+            .filter(
+              (card) => card.info.type === subChipActive && card.isAvailable
+            )
             .slice(0, actualPage * itemsPerPage)
         );
       } else {
         setActualData(
           items(languaje)
-            .filter((card) => card.type === chipActive)
+            .filter((card) => card.type === chipActive && card.isAvailable)
             .slice(0, actualPage * itemsPerPage)
         );
       }

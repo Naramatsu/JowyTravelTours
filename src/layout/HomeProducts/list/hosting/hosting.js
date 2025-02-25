@@ -3,9 +3,11 @@ import {
   APARTMENTS,
   BOCAGRANDE,
   BOQUILLA,
+  ENGLISH,
   HOSTING,
   LAGUITO,
   SANTAMARTA,
+  SPANISH,
   bedrooms,
   defaultHostingProperties,
   description1,
@@ -26,7 +28,17 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Balcón",
+            "Vista al Mar",
+            "Lavandería",
+            "30m de la playa",
+          ],
+          [ENGLISH]: ["Balcony", "Ocean View", "Laundry", "30m from the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -111,7 +123,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Balcón", "Vista al Mar", "Frente a la playa"],
+          [ENGLISH]: ["Balcony", "Ocean View", "In front of the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -179,7 +196,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Vista al Mar", "Frente a la playa"],
+          [ENGLISH]: ["Ocean View", "In front of the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -212,22 +234,19 @@ export const hostingItems = (languaje) => [
       ],
       gallery: [
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/10/8ab7f64f-689e-4f1f-8226-2f2c42ed1157.jpg",
-          span: { gridRow: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1738608552/Jowy%20Travels%20y%20Tour/Palmetto%20Eliptic/10_xflnct.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/10/8ab7f64f-689e-4f1f-8226-2f2c42ed1157.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1738608550/Jowy%20Travels%20y%20Tour/Palmetto%20Eliptic/2_rubqvn.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/10/8ab7f64f-689e-4f1f-8226-2f2c42ed1157.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1738608550/Jowy%20Travels%20y%20Tour/Palmetto%20Eliptic/1_uzmuff.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/10/8ab7f64f-689e-4f1f-8226-2f2c42ed1157.jpg",
-          span: { gridColumn: "span 2" },
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1738608553/Jowy%20Travels%20y%20Tour/Palmetto%20Eliptic/11_pozsov.jpg",
         },
         {
-          url: "https://reservacartagena.com/wp-content/uploads/2019/10/8ab7f64f-689e-4f1f-8226-2f2c42ed1157.jpg",
+          url: "https://res.cloudinary.com/drn7dmjkz/image/upload/v1738608551/Jowy%20Travels%20y%20Tour/Palmetto%20Eliptic/8_ugac0c.jpg",
         },
       ],
     },
@@ -243,7 +262,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Balcón", "Vista al Mar", "Frente a la playa"],
+          [ENGLISH]: ["Balcony", "Ocean View", "In front of the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -307,7 +331,22 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Balcón",
+            "Vista al Mar",
+            "Frente a la playa",
+            "Vista al lago",
+          ],
+          [ENGLISH]: [
+            "Balcony",
+            "Ocean View",
+            "In front of the beach",
+            "Lake view",
+          ],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -390,7 +429,22 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Balcón",
+            "Vista al Mar",
+            "Vista al lago",
+            "100m de la playa",
+          ],
+          [ENGLISH]: [
+            "Balcony",
+            "Ocean View",
+            "Lake view",
+            "100m from the beach",
+          ],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -447,7 +501,7 @@ export const hostingItems = (languaje) => [
     id: "HO-07",
     img: "https://www.civitatis.com/f/colombia/cartagena-de-indias/excursion-playa-blanca-589x392.jpg",
     type: HOSTING[languaje],
-    isAvailable: true,
+    isAvailable: false,
     info: {
       name: "Penthouse",
       location: LAGUITO,
@@ -504,7 +558,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Vista al Mar", "Vista al lago", "100m de la playa"],
+          [ENGLISH]: ["Ocean View", "Lake view", "100m from the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -569,7 +628,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["100m de la playa"],
+          [ENGLISH]: ["100m from the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -636,7 +700,6 @@ export const hostingItems = (languaje) => [
         },
         {
           url: "https://res.cloudinary.com/drn7dmjkz/video/upload/v1715209343/Jowy%20Travels%20y%20Tour/Edificio%20Atlantis/VID-20231202-WA0024_q7gp3x.mp4",
-          span: { gridColumn: "span 3" },
           type: "video",
         },
       ],
@@ -653,7 +716,20 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Vista al Mar",
+            "Frente a la playa",
+            "Salida directa a la playa",
+          ],
+          [ENGLISH]: [
+            "Ocean View",
+            "In front of the beach",
+            "Direct access to the beach",
+          ],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -718,7 +794,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Vista al Mar", "Frente a la playa"],
+          [ENGLISH]: ["Ocean View", "In front of the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -769,7 +850,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["100m de la playa"],
+          [ENGLISH]: ["100m from the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -834,7 +920,12 @@ export const hostingItems = (languaje) => [
       type: APARTMENTS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["100m de la playa", "Al lado de Mcdonalds"],
+          [ENGLISH]: ["100m from the beach", "Next to McDonalds"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -919,7 +1010,7 @@ export const hostingItems = (languaje) => [
     id: "HO-14",
     img: "https://dynamc-media-cdn.tripadvisor.com/media/photo-o/1a/5a/bf/e2/caption.jpg?w=1200&h=-1&s=1",
     type: HOSTING[languaje],
-    isAvailable: true,
+    isAvailable: false,
     info: {
       name: "Rodadero",
       location: SANTAMARTA,

@@ -20,6 +20,11 @@ export const askFor = {
   [ENGLISH]: "Ask for this ",
 };
 
+export const scheduleLabel = {
+  [SPANISH]: "Horario",
+  [ENGLISH]: "Schedule",
+};
+
 export const whatsAppMessage = {
   [SPANISH]:
     "Hola John, vengo a traves de tu pagina web para preguntarte por lo siguiente: ",

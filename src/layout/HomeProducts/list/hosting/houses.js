@@ -1,15 +1,37 @@
 import { MdOutlineDoorFront } from "react-icons/md";
 
 import {
+  ENGLISH,
   HOSTING,
   HOUSES,
+  SPANISH,
   bedrooms,
-  defaultHostingProperties,
   description1,
   mainDescription1,
 } from "../../../../utils/constants";
 
 import { detailsPersonGenerator } from "../../../../utils";
+
+export const defaultHostingProperties = (
+  additional = { [SPANISH]: [], [ENGLISH]: [] }
+) => ({
+  [SPANISH]: [
+    "Aire acondicionado",
+    "Wifi",
+    "Televisor",
+    "Cocina",
+    "Amobladas",
+    ...additional[SPANISH],
+  ],
+  [ENGLISH]: [
+    "Air-conditioning",
+    "Wifi",
+    "TV",
+    "Kitchen",
+    "Furnished",
+    ...additional[ENGLISH],
+  ],
+});
 
 export const housesItems = (languaje) => [
   {
@@ -23,7 +45,7 @@ export const housesItems = (languaje) => [
       type: HOUSES[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: { ...defaultHostingProperties() },
       details: [
         {
           ...detailsPersonGenerator({
@@ -103,7 +125,26 @@ export const housesItems = (languaje) => [
       type: HOUSES[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Balcón con vista al mar",
+            "Lavadora",
+            "Gym",
+            "Jacuzzi",
+            "Piscina",
+            "Salida directa al mar",
+          ],
+          [ENGLISH]: [
+            "Balcony with sea view",
+            "Washing machine",
+            "Gym",
+            "Jacuzzi",
+            "Pool",
+            "Direct access to the sea",
+          ],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -150,7 +191,26 @@ export const housesItems = (languaje) => [
       type: HOUSES[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [
+            "Camas dobles",
+            "Camas sencillas",
+            "Terraza con vista a Cholon",
+            "BBQ",
+            "Generador electrico",
+            "Mayordomo",
+          ],
+          [ENGLISH]: [
+            "Double beds",
+            "Single beds",
+            "Terrace with a view of Cholon",
+            "BBQ",
+            "Electric generator",
+            "Butler",
+          ],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({

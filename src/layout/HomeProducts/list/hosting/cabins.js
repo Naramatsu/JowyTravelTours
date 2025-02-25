@@ -11,17 +11,18 @@ import {
 } from "../../../../utils/constants";
 
 import { detailsPersonGenerator } from "../../../../utils";
-
-const properties = {
+export const defaultHostingProperties = (
+  additional = { [SPANISH]: [], [ENGLISH]: [] }
+) => ({
   [SPANISH]: [
     "Camas",
-    "Servicio de habitacion",
-    "Minibar",
+    "Abanicos",
     "Restaurante",
     "Vista al mar",
+    ...additional[SPANISH],
   ],
-  [ENGLISH]: ["Beds", "Room service", "Minibar", "Restaurant", "Seaview"],
-};
+  [ENGLISH]: ["Beds", "Fans", "Restaurant", "Sea view", ...additional[ENGLISH]],
+});
 
 export const cabinsItems = (languaje) => [
   {
@@ -35,7 +36,12 @@ export const cabinsItems = (languaje) => [
       type: CABINS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties,
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Cabañas naturales"],
+          [ENGLISH]: ["Natural cabins"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -83,7 +89,9 @@ export const cabinsItems = (languaje) => [
       type: CABINS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties,
+      properties: {
+        ...defaultHostingProperties(),
+      },
       details: [
         {
           ...detailsPersonGenerator({

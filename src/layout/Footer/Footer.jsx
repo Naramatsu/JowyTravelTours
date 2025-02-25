@@ -23,7 +23,7 @@ const Footer = () => {
             <Link to="/" className="title">
               <span>Jowy </span>Travel <span>& </span>Tours
             </Link>
-            {footerDescription[languaje]}
+            <p className="title__description">{footerDescription[languaje]}</p>
           </section>
           <section className="usefull_links">
             <h3>{usefulLinks[languaje]}</h3>

@@ -49,18 +49,23 @@ export const panelDescription = {
   ),
 };
 
-export const outstandingInfo = {
-  [SPANISH]: [
-    { cuantity: "10", label: "Años de experiencia" },
-    { cuantity: "10+", label: "Hoteles" },
-    { cuantity: "3", label: "Ciudades disponibles" },
-  ],
-  [ENGLISH]: [
-    { cuantity: "10", label: "Years of experience" },
-    { cuantity: "10+", label: "Hotels" },
-    { cuantity: "3", label: "Cities availables" },
-  ],
-};
+export const outstandingInfo = [
+  {
+    cuantity: "10",
+    label: {
+      [SPANISH]: "Años de experiencia",
+      [ENGLISH]: "Years of experience",
+    },
+  },
+  { cuantity: "10+", label: { [SPANISH]: "Hoteles", [ENGLISH]: "Hotels" } },
+  {
+    cuantity: "3",
+    label: {
+      [SPANISH]: "Ciudades disponibles",
+      [ENGLISH]: "Cities availables",
+    },
+  },
+];
 
 export const whyPanelTitle = {
   [SPANISH]: <h2>¿Por qué elegirnos?</h2>,
@@ -71,129 +76,88 @@ export const whyPanelTitle = {
   ),
 };
 
-export const whyChooseUs = {
-  [SPANISH]: [
-    {
-      cuantity: "01",
-      label: "Nos ajustamos a tu presupuesto",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+export const whyChooseUs = [
+  {
+    cuantity: "01",
+    label: {
+      [SPANISH]: "Nos ajustamos a tu presupuesto",
+      [ENGLISH]: "We fit your budget",
     },
-    {
-      cuantity: "02",
-      label: "Somos confiables",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+    description: {
+      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
     },
-    {
-      cuantity: "03",
-      label: "Nos importas demasiado",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+  },
+  {
+    cuantity: "02",
+    label: {
+      [SPANISH]: "Somos confiables",
+      [ENGLISH]: "We are reliable",
     },
-    {
-      cuantity: "04",
-      label: "Nos importas demasiado",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+    description: {
+      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
     },
-  ],
-  [ENGLISH]: [
-    {
-      cuantity: "01",
-      label: "We fit your budget",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+  },
+  {
+    cuantity: "03",
+    label: {
+      [SPANISH]: "Nos importas demasiado",
+      [ENGLISH]: "We care too much about you",
     },
-    {
-      cuantity: "02",
-      label: "We are reliable",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+    description: {
+      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
     },
-    {
-      cuantity: "03",
-      label: "We care too much about you",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+  },
+  {
+    cuantity: "04",
+    label: {
+      [SPANISH]: "Nos importas demasiado",
+      [ENGLISH]: "We care too much about you",
     },
-    {
-      cuantity: "04",
-      label: "We care too much about you",
-      description: (
-        <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen
-        </p>
-      ),
+    description: {
+      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
     },
-  ],
-};
+  },
+];
 
-export const steps = {
-  [SPANISH]: [
-    {
-      index: 1,
-      label: "Me Contactas",
-      description: <p>Te damos asesoría</p>,
+export const steps = [
+  {
+    index: 1,
+    label: {
+      [SPANISH]: "Me Contactas",
+      [ENGLISH]: "Contact me",
     },
-    {
-      index: 2,
-      label: "Nos amoldamos a tu presupuesto",
-      description: <p>Buscamos de acuerdo a tus necesidades</p>,
+    description: {
+      [SPANISH]: "Te damos asesoría",
+      [ENGLISH]: "We give you advice",
     },
-    {
-      index: 3,
-      label: "Generamos la reserva",
-      description: <p>Para que disfrutes de tus vacaciones</p>,
+  },
+  {
+    index: 2,
+    label: {
+      [SPANISH]: "Nos amoldamos a tu presupuesto",
+      [ENGLISH]: "We adapt to your budget",
     },
-  ],
-  [ENGLISH]: [
-    {
-      index: 1,
-      label: "Contact me",
-      description: <p>We give you advice</p>,
+    description: {
+      [SPANISH]: "Buscamos de acuerdo a tus necesidades",
+      [ENGLISH]: ">We search according to your needs",
     },
-    {
-      index: 2,
-      label: "We adapt to your budget",
-      description: <p>We search according to your needs</p>,
+  },
+  {
+    index: 3,
+    label: {
+      [SPANISH]: "Generamos la reserva",
+      [ENGLISH]: "We generate the reservation",
     },
-    {
-      index: 3,
-      label: "We generate the reservation",
-      description: <p>We search according to your needs</p>,
+    description: {
+      [SPANISH]: "Para que disfrutes de tus vacaciones",
+      [ENGLISH]: "We search according to your needs",
     },
-  ],
-};
+  },
+];
 
 export const howItWorks = {
   [SPANISH]: {

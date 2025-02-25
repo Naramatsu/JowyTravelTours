@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import "./ModalGallery.style.scss";
 import { videoNotAllowedByBrowser } from "../../utils/constants";
 
-const ModalGallery = ({ show, onClose, gallery, activeIndex }) => {
+const ModalGallery = ({ show, onClose, gallery, activeIndex, languaje }) => {
   const [cursor, setCursor] = useState(activeIndex);
 
   const modalClassName = show ? "show" : "";
@@ -53,7 +53,7 @@ const ModalGallery = ({ show, onClose, gallery, activeIndex }) => {
                   loop={true}
                   style={{ ...images.span }}
                 >
-                  {videoNotAllowedByBrowser}
+                  {videoNotAllowedByBrowser[languaje]}
                 </video>
               );
             return (

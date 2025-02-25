@@ -2,15 +2,29 @@ import { MdOutlineDoorFront } from "react-icons/md";
 
 import {
   BOCAGRANDE,
+  ENGLISH,
   HOSTING,
   HOTELS,
+  SPANISH,
   bedrooms,
-  defaultHostingProperties,
   description1,
   mainDescription1,
 } from "../../../../utils/constants";
 
 import { detailsPersonGenerator } from "../../../../utils";
+
+export const defaultHostingProperties = (
+  additional = { [SPANISH]: [], [ENGLISH]: [] }
+) => ({
+  [SPANISH]: [
+    "Aire acondicionado",
+    "Wifi",
+    "Televisor",
+    "Piscina",
+    ...additional[SPANISH],
+  ],
+  [ENGLISH]: ["Air-conditioning", "Wifi", "TV", "Pool", ...additional[ENGLISH]],
+});
 
 export const hotelsItems = (languaje) => [
   {
@@ -24,7 +38,7 @@ export const hotelsItems = (languaje) => [
       type: HOTELS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: { ...defaultHostingProperties() },
       details: [
         {
           ...detailsPersonGenerator({
@@ -75,7 +89,12 @@ export const hotelsItems = (languaje) => [
       type: HOTELS[languaje],
       mainDescription: { ...mainDescription1 },
       description: { ...description1 },
-      properties: { ...defaultHostingProperties },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: ["Frente a la playa"],
+          [ENGLISH]: ["In front of the beach"],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({

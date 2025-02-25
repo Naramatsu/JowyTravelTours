@@ -43,8 +43,8 @@ const AboutUs = () => {
           description={panelDescription[languaje]}
         >
           <section className="shape__container__list">
-            {outstandingInfo[languaje].map(({ cuantity, label }, index) => (
-              <Shape key={index} cuantity={cuantity} label={label} />
+            {outstandingInfo.map(({ cuantity, label }, index) => (
+              <Shape key={index} cuantity={cuantity} label={label[languaje]} />
             ))}
           </section>
         </PanelImage>
@@ -54,13 +54,13 @@ const AboutUs = () => {
             {howItWorks[languaje].description}
           </section>
           <section className="how-it-works__steps">
-            {steps[languaje].map(({ index, label, description }) => (
+            {steps.map(({ index, label, description }) => (
               <React.Fragment key={index}>
                 <section className="whyUs__panel">
                   <Shape cuantity={index} />
                   <section className="whyUs__panel__caption">
-                    <h4>{label}</h4>
-                    {description}
+                    <h4>{label[languaje]}</h4>
+                    <p>{description[languaje]}</p>
                   </section>
                 </section>
                 <img className={`arrow ${theme}`} src={Arrow} alt="arrow" />
@@ -76,17 +76,15 @@ const AboutUs = () => {
           side="right"
         >
           <section className="whyUs__container__list">
-            {whyChooseUs[languaje].map(
-              ({ cuantity, label, description }, index) => (
-                <section key={index} className={`whyUs__panel ${theme}`}>
-                  <Shape cuantity={cuantity} />
-                  <section className="whyUs__panel__caption">
-                    <h4>{label}</h4>
-                    {description}
-                  </section>
+            {whyChooseUs.map(({ cuantity, label, description }, index) => (
+              <section key={index} className={`whyUs__panel ${theme}`}>
+                <Shape cuantity={cuantity} />
+                <section className="whyUs__panel__caption">
+                  <h4>{label[languaje]}</h4>
+                  <p>{description[languaje]}</p>
                 </section>
-              )
-            )}
+              </section>
+            ))}
           </section>
         </PanelImage>
       </Container>

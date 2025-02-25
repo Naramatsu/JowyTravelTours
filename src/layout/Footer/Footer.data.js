@@ -4,20 +4,16 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { ROUTES } from "../../utils/routes";
 
 export const footerDescription = {
-  [SPANISH]: (
-    <p className="title__description">
+  [SPANISH]: `
       Cada viaje es una oportunidad para descubrir, explorar y crear recuerdos
       inolvidables. Cartagena de Indias es un lugar perfecto para conocer y
       disfrutar de todas las maravillas que contiene esta bella ciudad.
-    </p>
-  ),
-  [ENGLISH]: (
-    <p className="title__description">
+    `,
+  [ENGLISH]: `
       Every trip is an opportunity to discover, explore and create unforgettable
       memories. Cartagena de Indias is a perfect place to discover and enjoy all
       the wonders that this beautiful city contains.
-    </p>
-  ),
+  `,
 };
 
 export const usefulLinks = {

@@ -4,7 +4,12 @@ import Grid from "../../layout/Grid";
 import ModalGallery from "../../components/ModalGallery";
 import { useHistory } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-import { askFor, pageTitle, whatsAppMessage } from "./Products.data";
+import {
+  askFor,
+  pageTitle,
+  scheduleLabel,
+  whatsAppMessage,
+} from "./Products.data";
 import { PreferencesAppContext } from "../../context/Preferences";
 import { items } from "../../layout/HomeProducts/productsList.data";
 import { ROUTES } from "../../utils/routes";
@@ -25,6 +30,8 @@ const Products = () => {
 
   const { img, type } = product;
   const { name, mainDescription, description, gallery } = product.info;
+  const schedule = product?.info?.schedule || null;
+  const warnings = product?.info?.warnings || null;
 
   useEffect(() => {
     document.title = `Jowy Travel & Tours | ${pageTitle[languaje]} | ${name}`;
@@ -61,6 +68,26 @@ const Products = () => {
                 <p key={index}>{property}</p>
               ))}
             </Grid>
+            {schedule && (
+              <section className="schedule">
+                <h4>{scheduleLabel[languaje]}</h4>
+                <ul>
+                  {schedule[languaje].map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {warnings && (
+              <section className="warnings">
+                <h4>{warnings[languaje].title}</h4>
+                <ul>
+                  {warnings[languaje].items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
             <button className="btn-order" onClick={onAskProduct}>
               <FaWhatsapp />
               {askFor[languaje]} {type}
@@ -70,6 +97,7 @@ const Products = () => {
                 if (images.type === "video")
                   return (
                     <video
+                      key={index}
                       src={images.url}
                       autoPlay
                       controls={false}
@@ -78,7 +106,7 @@ const Products = () => {
                       onClick={() => onShowModal(index)}
                       alt={`video-${index}`}
                     >
-                      {videoNotAllowedByBrowser}
+                      {videoNotAllowedByBrowser[languaje]}
                     </video>
                   );
                 return (
@@ -105,6 +133,7 @@ const Products = () => {
           gallery={gallery}
           onClose={() => setShowModalGallery(false)}
           activeIndex={galleryIndex}
+          languaje={languaje}
         />
       )}
     </section>

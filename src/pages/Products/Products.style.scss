@@ -12,17 +12,17 @@
       position: relative;
 
       .main-banner {
+        border-radius: 10px;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px;
         position: absolute;
         width: calc(50% - 10px);
       }
 
       .products-caption {
+        grid-column: 2;
         text-align: center;
         width: 100%;
-        grid-column: 2;
 
         h1 {
           @include titleColor;
@@ -42,6 +42,26 @@
             margin: 0;
             padding-bottom: 10px;
           }
+        }
+
+        .schedule,
+        .warnings {
+          border: solid 1px $oragen-color;
+          border-radius: 10px;
+          margin-bottom: 46px;
+          padding: 8px 16px;
+          text-align: left;
+
+          h4 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0;
+          }
+        }
+
+        .warnings {
+          @include buttonOrangeGradient;
+          color: #fff;
         }
 
         .btn-order {
@@ -73,41 +93,42 @@
 
           .gallery-compressed {
             @include displayFlex;
+            border-radius: 10px;
+            bottom: 0;
+            color: #fff;
+            font-size: 2rem;
+            height: 150px;
+            pointer-events: none;
             position: absolute;
             right: 0;
-            bottom: 0;
             width: calc(25% - 7px);
-            height: 150px;
-            border-radius: 10px;
             z-index: 2;
-            font-size: 2rem;
-            color: #fff;
-            pointer-events: none;
 
             p {
               z-index: 2;
             }
 
             &::before {
+              background: rgba($color: #000000, $alpha: 0.5);
+              border-radius: 10px;
               content: "";
-              z-index: 1;
-              width: 100%;
               height: 100%;
+              left: 0;
               position: absolute;
               top: 0;
-              left: 0;
-              border-radius: 10px;
-              background: rgba($color: #000000, $alpha: 0.5);
+              width: 100%;
+              z-index: 1;
             }
           }
 
-          img {
-            position: relative;
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
+          img,
+          video {
             border-radius: 10px;
             cursor: pointer;
+            height: 150px;
+            object-fit: cover;
+            position: relative;
+            width: 100%;
           }
         }
       }
@@ -119,8 +140,8 @@
   .products {
     .products-container {
       .products-wrapper {
-        grid-template-columns: 1fr !important;
         gap: 0;
+        grid-template-columns: 1fr !important;
 
         .main-banner {
           position: relative;

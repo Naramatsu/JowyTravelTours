@@ -59,6 +59,9 @@
 
     .app__video__section__info__icon__container {
       @include displayFlex;
+      flex-direction: column;
+      gap: 0;
+      justify-content: space-between;
       position: relative;
 
       section {
@@ -78,6 +81,7 @@
       p {
         color: $gray-header-text;
         font-weight: 400;
+        margin: 0;
       }
     }
   }
@@ -143,9 +147,13 @@
   .app__video__section {
     .app__video__section__info {
       .app__video__section__info__icon__container {
-        svg,
         label {
           font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          text-align: center;
         }
       }
     }

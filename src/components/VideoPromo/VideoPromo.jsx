@@ -34,7 +34,7 @@ const VideoPromo = ({ languaje }) => {
       </section>
       <section className={`${componentClassNamePrefix}__info`}>
         <Grid columns={4}>
-          {cartagenaInfo[languaje].map((info, index) => (
+          {cartagenaInfo.map((info, index) => (
             <section
               key={index}
               className={`${componentClassNamePrefix}__info__icon__container`}
@@ -43,7 +43,7 @@ const VideoPromo = ({ languaje }) => {
                 {info.icon}
                 <label>{info.label}</label>
               </section>
-              <p>{info.name}</p>
+              <p>{info.name[languaje]}</p>
             </section>
           ))}
         </Grid>

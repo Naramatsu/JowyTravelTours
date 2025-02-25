@@ -16,7 +16,7 @@ export const BOQUILLA = "Boquilla";
 export const SANTAMARTA = "Santa Marta";
 
 export const celphone = "(+57) 310 350 4215";
-export const hours = "7am - 9pm GMT-5";
+export const hours = "7am - 8pm GMT-5";
 
 export const whatsAppLink = "https://wa.me/573103504215";
 
@@ -128,30 +128,28 @@ export const description1 = {
     "With wide and comfortable areas and daylight pouring in from the large windows, standard rooms open the doors of spaciousness just for you.",
 };
 
-export const defaultHostingProperties = {
+export const defaultHostingProperties = (additional) => ({
   [SPANISH]: [
     "Aire acondicionado",
-    "Comedor",
     "Wifi",
+    "Amueblados",
     "Televisor",
-    "Servicio de habitacion",
-    "Minibar",
-    "Restaurante",
+    "Nevera",
+    "Cocina",
     "Piscina",
-    "Vista al mar",
+    ...additional[SPANISH],
   ],
   [ENGLISH]: [
     "Air-conditioning",
-    "Dining room",
     "Wifi",
+    "Furnished",
     "TV",
-    "Room service",
-    "Minibar",
-    "Restaurant",
+    "Refrigerator",
+    "Kitchen",
     "Pool",
-    "Seaview",
+    ...additional[ENGLISH],
   ],
-};
+});
 
 export const additionalWarning = (people, languaje) => {
   if (languaje === SPANISH)
