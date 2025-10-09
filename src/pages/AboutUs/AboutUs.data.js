@@ -84,41 +84,49 @@ export const whyChooseUs = [
       [ENGLISH]: "We fit your budget",
     },
     description: {
-      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
-      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [SPANISH]:
+        "Creamos experiencias únicas para todos los gustos y bolsillos, ofreciendo planes flexibles sin sacrificar calidad ni diversión.",
+      [ENGLISH]:
+        "We create unique experiences for every taste and budget, offering flexible plans without compromising quality or fun.",
     },
   },
   {
     cuantity: "02",
     label: {
       [SPANISH]: "Somos confiables",
-      [ENGLISH]: "We are reliable",
+      [ENGLISH]: "We are trustworthy",
     },
     description: {
-      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
-      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [SPANISH]:
+        "Tu tranquilidad es nuestra prioridad. Cumplimos lo que prometemos, brindándote seguridad, puntualidad y servicio de primera.",
+      [ENGLISH]:
+        "Your peace of mind is our priority. We deliver what we promise, providing safety, punctuality, and top-quality service.",
     },
   },
   {
     cuantity: "03",
     label: {
       [SPANISH]: "Nos importas demasiado",
-      [ENGLISH]: "We care too much about you",
+      [ENGLISH]: "You truly matter to us",
     },
     description: {
-      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
-      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [SPANISH]:
+        "Cada viajero es parte de nuestra familia. Escuchamos tus necesidades y cuidamos cada detalle para que tu experiencia sea inolvidable.",
+      [ENGLISH]:
+        "Every traveler is part of our family. We listen to your needs and take care of every detail to make your experience unforgettable.",
     },
   },
   {
     cuantity: "04",
     label: {
-      [SPANISH]: "Nos importas demasiado",
-      [ENGLISH]: "We care too much about you",
+      [SPANISH]: "Queremos que disfrutes Cartagena",
+      [ENGLISH]: "We want you to enjoy Cartagena",
     },
     description: {
-      [SPANISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
-      [ENGLISH]: `desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen`,
+      [SPANISH]:
+        "Más que un destino, es una experiencia que queremos que vivas al máximo —con alegría, cultura y el encanto del Caribe.",
+      [ENGLISH]:
+        "More than just a destination, Cartagena is an experience we want you to live to the fullest —with joy, culture, and Caribbean charm.",
     },
   },
 ];

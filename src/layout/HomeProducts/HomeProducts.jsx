@@ -94,7 +94,11 @@ const HomeProducts = ({ languaje }) => {
         );
       }
     } else {
-      setActualData(items(languaje).slice(0, actualPage * itemsPerPage));
+      setActualData(
+        items(languaje)
+          .filter((card) => card.isAvailable)
+          .slice(0, actualPage * itemsPerPage)
+      );
     }
   }, [languaje, chipActive, actualPage, subChipActive, itemsPerPage]);
 

@@ -31,7 +31,7 @@ export const cartagenaInfo = [
   },
   {
     icon: <IoRestaurantOutline />,
-    label: "+1.000",
+    label: "+100",
     name: {
       [SPANISH]: "Restaurantes",
       [ENGLISH]: "Restaurants",

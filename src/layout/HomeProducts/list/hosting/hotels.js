@@ -36,9 +36,22 @@ export const hotelsItems = (languaje) => [
       name: "Ibatama",
       location: BOCAGRANDE,
       type: HOTELS[languaje],
-      mainDescription: { ...mainDescription1 },
-      description: { ...description1 },
-      properties: { ...defaultHostingProperties() },
+      mainDescription: {
+        [SPANISH]: "Comodidad y encanto caribeño con vista al mar",
+        [ENGLISH]: "Comfort and Caribbean charm with a sea view",
+      },
+      description: {
+        [SPANISH]:
+          "Disfruta de una estadía inolvidable en el Edificio Ibatama, un lugar ideal para quienes buscan comodidad, ubicación y el auténtico ambiente del Caribe. Situado en una de las zonas más turísticas de Cartagena, ofrece apartamentos amplios, bien equipados y con hermosas vistas hacia el mar o la ciudad. Relájate en su piscina, camina unos pasos hasta la playa o disfruta de los mejores restaurantes y comercios cercanos. Perfecto para familias, parejas o grupos que desean vivir Cartagena con confort y estilo.",
+        [ENGLISH]:
+          "Enjoy an unforgettable stay at the Ibatama Building, the perfect place for those seeking comfort, location, and the true Caribbean atmosphere. Located in one of Cartagena’s most touristic areas, it offers spacious, well-equipped apartments with beautiful views of the sea or the city. Relax by the pool, take a short walk to the beach, or explore the nearby restaurants and shops. Perfect for families, couples, or groups who want to experience Cartagena with comfort and style.",
+      },
+      properties: {
+        ...defaultHostingProperties({
+          [SPANISH]: [],
+          [ENGLISH]: [],
+        }),
+      },
       details: [
         {
           ...detailsPersonGenerator({
@@ -109,26 +122,7 @@ export const hotelsItems = (languaje) => [
           }),
         },
       ],
-      gallery: [
-        {
-          url: "https://cartagenadeindias.travel/wp-content/uploads/2022/11/marbella-2.webp",
-          span: { gridRow: "span 2" },
-        },
-        {
-          url: "https://cartagenadeindias.travel/wp-content/uploads/2022/11/marbella-2.webp",
-        },
-        {
-          url: "https://cartagenadeindias.travel/wp-content/uploads/2022/11/marbella-2.webp",
-          span: { gridColumn: "span 2" },
-        },
-        {
-          url: "https://cartagenadeindias.travel/wp-content/uploads/2022/11/marbella-2.webp",
-          span: { gridColumn: "span 2" },
-        },
-        {
-          url: "https://cartagenadeindias.travel/wp-content/uploads/2022/11/marbella-2.webp",
-        },
-      ],
+      gallery: [],
     },
   },
 ];

@@ -2,7 +2,7 @@ export const ROUTES = {
   HOME: "/",
   ABOUTUS: "/aboutus",
   CONTACTUS: "/contactus",
-  FREQUENTQUESTIONS: "/frequentquestions",
+  // FREQUENTQUESTIONS: "/frequentquestions",
   PRODUCTS: "/products",
   HOSTING: "/hosting",
   TOURS: "/tours",

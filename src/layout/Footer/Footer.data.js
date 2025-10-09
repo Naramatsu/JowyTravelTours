@@ -35,10 +35,10 @@ export const usefulLinksItems = {
       link: ROUTES.ABOUTUS,
       label: "Sobre Nosotros",
     },
-    {
-      link: ROUTES.FREQUENTQUESTIONS,
-      label: "Preguntas Frecuentes",
-    },
+    // {
+    //   link: ROUTES.FREQUENTQUESTIONS,
+    //   label: "Preguntas Frecuentes",
+    // },
   ],
   [ENGLISH]: [
     {
@@ -53,10 +53,10 @@ export const usefulLinksItems = {
       link: ROUTES.ABOUTUS,
       label: "About Us",
     },
-    {
-      link: ROUTES.FREQUENTQUESTIONS,
-      label: "Frequents Questions",
-    },
+    // {
+    //   link: ROUTES.FREQUENTQUESTIONS,
+    //   label: "Frequents Questions",
+    // },
   ],
 };
 

@@ -62,7 +62,13 @@ const Products = () => {
           <article className="products-caption">
             <h1>{name}</h1>
             <h3>{mainDescription[languaje]}</h3>
-            <p>{description[languaje]}</p>
+            <p className="product-description">
+              {description[languaje].split(". ").map((text, index) => (
+                <span key={index}>
+                  {text}. <br />
+                </span>
+              ))}
+            </p>
             <Grid columns={2} className="products-outstanding">
               {product.info.properties[languaje].map((property, index) => (
                 <p key={index}>{property}</p>

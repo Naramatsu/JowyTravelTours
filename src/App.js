@@ -10,6 +10,7 @@ import { isDarkTheme } from "./utils";
 import { PreferencesAppContext } from "./context/Preferences";
 import { Switch, Route } from "react-router-dom";
 import { ROUTES } from "./utils/routes";
+import { showSection } from "./utils/constants";
 
 const App = () => {
   const { theme } = useContext(PreferencesAppContext);
@@ -26,9 +27,11 @@ const App = () => {
         <Route exact path={ROUTES.CONTACTUS}>
           <ConctactUs />
         </Route>
-        <Route exact path={ROUTES.FREQUENTQUESTIONS}>
-          <FrequentQuestions />
-        </Route>
+        {showSection && (
+          <Route exact path={ROUTES.FREQUENTQUESTIONS}>
+            <FrequentQuestions />
+          </Route>
+        )}
         <Route exact path={ROUTES.PRODUCTS}>
           <Products />
         </Route>

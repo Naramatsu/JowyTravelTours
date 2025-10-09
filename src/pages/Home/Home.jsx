@@ -25,6 +25,7 @@ import {
   popularPlacesItems,
 } from "./Home.data";
 import "./Home.style.scss";
+import { showSection } from "../../utils/constants";
 
 const Home = () => {
   const { languaje, theme } = useContext(PreferencesAppContext);
@@ -77,21 +78,23 @@ const Home = () => {
         <VideoPromo languaje={languaje} />
         <HomeProducts languaje={languaje} />
       </Container>
-      <Slider
-        title={clientsTestimonials[languaje]}
-        width="70%"
-        size={clientsTestimonialsItems.length}
-      >
-        {clientsTestimonialsItems.map((testimonial, index) => (
-          <CardClientsTestimonials
-            key={index}
-            items={testimonial}
-            languaje={languaje}
-            theme={theme}
-          />
-        ))}
-      </Slider>
-      {false && (
+      {showSection && (
+        <Slider
+          title={clientsTestimonials[languaje]}
+          width="70%"
+          size={clientsTestimonialsItems.length}
+        >
+          {clientsTestimonialsItems.map((testimonial, index) => (
+            <CardClientsTestimonials
+              key={index}
+              items={testimonial}
+              languaje={languaje}
+              theme={theme}
+            />
+          ))}
+        </Slider>
+      )}
+      {showSection && (
         <Slider
           title={citiesTitle[languaje]}
           size={citiesItems.length}

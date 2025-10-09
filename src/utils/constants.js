@@ -213,3 +213,5 @@ export const appSubtitle = {
     </>
   ),
 };
+
+export const showSection = false;
