@@ -1,6 +1,5 @@
 import { LiaFacebook } from "react-icons/lia";
 import { ENGLISH, SPANISH } from "../../utils/constants";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { ROUTES } from "../../utils/routes";
 
 export const footerDescription = {
@@ -67,16 +66,8 @@ export const ourSocialMedia = {
 
 export const ourSocialMediaItems = [
   {
-    link: "/",
+    link: "https://www.facebook.com/JohnJowyTravelsNTours",
     icon: <LiaFacebook />,
-  },
-  {
-    link: "/",
-    icon: <FaInstagram />,
-  },
-  {
-    link: "/",
-    icon: <FaWhatsapp />,
   },
 ];
 

@@ -75,7 +75,7 @@ const Home = () => {
         ))}
       </Slider>
       <Container width="70%">
-        <VideoPromo languaje={languaje} />
+        {showSection && <VideoPromo languaje={languaje} />}
         <HomeProducts languaje={languaje} />
       </Container>
       {showSection && (
