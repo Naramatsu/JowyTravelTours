@@ -4,7 +4,7 @@ import BannerPage from "../../components/BannerPage";
 import Container from "../../layout/Container";
 import PanelImage from "../../components/PanelImage";
 import Shape from "../../components/Shape";
-import { imgBanner } from "../../utils/constants";
+import { imgBanner, showSection } from "../../utils/constants";
 
 import {
   howItWorks,
@@ -35,39 +35,47 @@ const AboutUs = () => {
         img="https://cloudfront-us-east-1.images.arcpublishing.com/semana/E4PC43N2KRFZTKCEBUSVY3XETU.jpg"
       />
       <Container width="70%" className="aboutus__panel">
-        <PanelImage
-          img={imgBanner}
-          theme={theme}
-          title={panelTitle[languaje]}
-          className="aboutus__panel__container"
-          description={panelDescription[languaje]}
-        >
-          <section className="shape__container__list">
-            {outstandingInfo.map(({ cuantity, label }, index) => (
-              <Shape key={index} cuantity={cuantity} label={label[languaje]} />
-            ))}
-          </section>
-        </PanelImage>
-        <section className="how-it-works">
-          <section className="how-it-works__title">
-            <h3>{howItWorks[languaje].title}</h3>
-            {howItWorks[languaje].description}
-          </section>
-          <section className="how-it-works__steps">
-            {steps.map(({ index, label, description }) => (
-              <React.Fragment key={index}>
-                <section className="whyUs__panel">
-                  <Shape cuantity={index} />
-                  <section className="whyUs__panel__caption">
-                    <h4>{label[languaje]}</h4>
-                    <p>{description[languaje]}</p>
-                  </section>
-                </section>
-                <img className={`arrow ${theme}`} src={Arrow} alt="arrow" />
-              </React.Fragment>
-            ))}
-          </section>
-        </section>
+        {showSection && (
+          <>
+            <PanelImage
+              img={imgBanner}
+              theme={theme}
+              title={panelTitle[languaje]}
+              className="aboutus__panel__container"
+              description={panelDescription[languaje]}
+            >
+              <section className="shape__container__list">
+                {outstandingInfo.map(({ cuantity, label }, index) => (
+                  <Shape
+                    key={index}
+                    cuantity={cuantity}
+                    label={label[languaje]}
+                  />
+                ))}
+              </section>
+            </PanelImage>
+            <section className="how-it-works">
+              <section className="how-it-works__title">
+                <h3>{howItWorks[languaje].title}</h3>
+                {howItWorks[languaje].description}
+              </section>
+              <section className="how-it-works__steps">
+                {steps.map(({ index, label, description }) => (
+                  <React.Fragment key={index}>
+                    <section className="whyUs__panel">
+                      <Shape cuantity={index} />
+                      <section className="whyUs__panel__caption">
+                        <h4>{label[languaje]}</h4>
+                        <p>{description[languaje]}</p>
+                      </section>
+                    </section>
+                    <img className={`arrow ${theme}`} src={Arrow} alt="arrow" />
+                  </React.Fragment>
+                ))}
+              </section>
+            </section>
+          </>
+        )}
         <PanelImage
           img="https://images.unsplash.com/photo-1534943441045-1009d7cb0bb9?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FydGFnZW5hfGVufDB8fDB8fHww"
           theme={theme}
